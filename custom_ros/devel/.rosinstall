@@ -1,0 +1,2 @@
+- setup-file:
+    local-name: /home/turtlebot/Documents/rosWS/custom_ros/devel/setup.sh
