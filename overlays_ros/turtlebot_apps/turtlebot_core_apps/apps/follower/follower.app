@@ -1,0 +1,11 @@
+display:     Follower
+description: Take the TurtleBot for a stroll. TurtleBot will follow whatever is in front of it.
+platform:    turtlebot
+launch:      turtlebot_follower/follower.launch
+interface:   turtlebot_core_apps/follower.interface
+icon:        turtlebot_core_apps/follower_bubble_icon.png
+clients:
+  - type: android
+    manager:
+      api-level: 9
+      intent-action: com.ros.turtlebot.apps.follower.FollowerActivity
