@@ -5,9 +5,9 @@ The code for the adc (adcDriver.cpp and adcClient.cpp) comes from ros4mat  (http
 
 You need to add some text at the end of your ~/.bashrc file :
 
-  export TURTLEBOT_BASE=create
+  *export TURTLEBOT_BASE=create
   
-  export TURTLEBOT_STACKS=circles
+  *export TURTLEBOT_STACKS=circles
   
   export TURTLEBOT_3D_SENSOR=kinect
   
