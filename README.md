@@ -1,7 +1,7 @@
 rosWS
 =====
 
-The code for the adc (adcDriver.cpp and adcClient.cpp) comes from ros4mat  (https://code.google.com/p/ros4mat/). 
+The code for the adc (adcDriver.cpp and adcClient.cpp) in custom_navigation package comes from ros4mat  (https://code.google.com/p/ros4mat/). 
 
 You need to add some code at the end of your ~/.bashrc file : 
    
