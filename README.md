@@ -8,7 +8,7 @@ You need to add some code at the end of your ~/.bashrc file :
     export ROS_MASTER_URI = http://MASTER_IP::11311  
     export ROS_HOSTNAME = http://OWN_IP  
     source /opt/ros/groovy/setup.bash  
-    export ROS_PACKAGE_PATH= PATH_TO_ROSBUILD_WS:PATH_TO_CUSTOM_NAVIGATION:$ROS_PACKAGE_PATH
+    export ROS_PACKAGE_PATH= PATH_TO_OVERLAYS_ROS:PATH_TO_CUSTOM_ROS:$ROS_PACKAGE_PATH
   
 Necessary commands in terminal to make the custom navigation system works (each command in separate tabs/windows):
 
