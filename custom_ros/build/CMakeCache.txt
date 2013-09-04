@@ -196,6 +196,9 @@ LSB_RELEASE_EXECUTABLE:FILEPATH=/usr/bin/lsb_release
 //Path to a program.
 NOSETESTS:FILEPATH=/usr/bin/nosetests
 
+//pkg-config executable
+PKG_CONFIG_EXECUTABLE:FILEPATH=/usr/bin/pkg-config
+
 //Path to a program.
 PYTHON_EXECUTABLE:FILEPATH=/usr/bin/python2.7
 
@@ -247,8 +250,14 @@ genpy_DIR:PATH=/opt/ros/groovy/share/genpy/cmake
 //The directory containing a CMake configuration file for geometry_msgs.
 geometry_msgs_DIR:PATH=/opt/ros/groovy/share/geometry_msgs/cmake
 
+//Value Computed by CMake
+kinect_aux_BINARY_DIR:STATIC=/home/turtlebot/Documents/rosWS/custom_ros/build/kinect_aux
+
+//Value Computed by CMake
+kinect_aux_SOURCE_DIR:STATIC=/home/turtlebot/Documents/rosWS/custom_ros/src/kinect_aux
+
 //Path to a library.
-lib:FILEPATH=/opt/ros/groovy/lib/libtf.so
+lib:FILEPATH=/opt/ros/groovy/lib/libxmlrpcpp.so
 
 //The directory containing a CMake configuration file for message_filters.
 message_filters_DIR:PATH=/opt/ros/groovy/share/message_filters/cmake
@@ -390,7 +399,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_LOCAL_GENERATORS:INTERNAL=2
+CMAKE_NUMBER_OF_LOCAL_GENERATORS:INTERNAL=3
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP
@@ -436,10 +445,47 @@ GTEST_MAIN_LIBRARIES:INTERNAL=/usr/lib/libgtest_main.a
 GTEST_MAIN_LIBRARY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: GTEST_MAIN_LIBRARY_DEBUG
 GTEST_MAIN_LIBRARY_DEBUG-ADVANCED:INTERNAL=1
+LIBUSB_CFLAGS:INTERNAL=-I/usr/include/libusb-1.0
+LIBUSB_CFLAGS_I:INTERNAL=
+LIBUSB_CFLAGS_OTHER:INTERNAL=
+LIBUSB_FOUND:INTERNAL=1
+LIBUSB_INCLUDEDIR:INTERNAL=/usr/include
+LIBUSB_INCLUDE_DIRS:INTERNAL=/usr/include/libusb-1.0
+LIBUSB_LDFLAGS:INTERNAL=-lusb-1.0
+LIBUSB_LDFLAGS_OTHER:INTERNAL=
+LIBUSB_LIBDIR:INTERNAL=/usr/lib/i386-linux-gnu
+LIBUSB_LIBRARIES:INTERNAL=usb-1.0
+LIBUSB_LIBRARY_DIRS:INTERNAL=
+LIBUSB_LIBS:INTERNAL=
+LIBUSB_LIBS_L:INTERNAL=
+LIBUSB_LIBS_OTHER:INTERNAL=
+LIBUSB_LIBS_PATHS:INTERNAL=
+LIBUSB_PREFIX:INTERNAL=/usr
+LIBUSB_STATIC_CFLAGS:INTERNAL=-I/usr/include/libusb-1.0
+LIBUSB_STATIC_CFLAGS_I:INTERNAL=
+LIBUSB_STATIC_CFLAGS_OTHER:INTERNAL=
+LIBUSB_STATIC_INCLUDE_DIRS:INTERNAL=/usr/include/libusb-1.0
+LIBUSB_STATIC_LDFLAGS:INTERNAL=-lusb-1.0
+LIBUSB_STATIC_LDFLAGS_OTHER:INTERNAL=
+LIBUSB_STATIC_LIBDIR:INTERNAL=
+LIBUSB_STATIC_LIBRARIES:INTERNAL=usb-1.0
+LIBUSB_STATIC_LIBRARY_DIRS:INTERNAL=
+LIBUSB_STATIC_LIBS:INTERNAL=
+LIBUSB_STATIC_LIBS_L:INTERNAL=
+LIBUSB_STATIC_LIBS_OTHER:INTERNAL=
+LIBUSB_STATIC_LIBS_PATHS:INTERNAL=
+LIBUSB_VERSION:INTERNAL=1.0.8
+LIBUSB_libusb-1.0_INCLUDEDIR:INTERNAL=
+LIBUSB_libusb-1.0_LIBDIR:INTERNAL=
+LIBUSB_libusb-1.0_PREFIX:INTERNAL=
+LIBUSB_libusb-1.0_VERSION:INTERNAL=
+//ADVANCED property for variable: PKG_CONFIG_EXECUTABLE
+PKG_CONFIG_EXECUTABLE-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: PYTHON_EXECUTABLE
 PYTHON_EXECUTABLE-ADVANCED:INTERNAL=1
 //This needs to be in PYTHONPATH when 'setup.py install' is called.
 //  And it needs to match.  But setuptools won't tell us where
 // it will install things.
 PYTHON_INSTALL_DIR:INTERNAL=lib/python2.7/dist-packages
+__pkg_config_checked_LIBUSB:INTERNAL=1
 

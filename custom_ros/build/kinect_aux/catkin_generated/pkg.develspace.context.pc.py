@@ -1,0 +1,7 @@
+CATKIN_PACKAGE_PREFIX=""
+PROJECT_ABSOLUTE_INCLUDE_DIRS="/usr/include/libusb-1.0"
+PROJECT_CATKIN_DEPENDS="roscpp;sensor_msgs;std_msgs"
+PKG_CONFIG_LIBRARIES_WITH_PREFIX="-lusb-1.0"
+PROJECT_NAME="kinect_aux"
+PROJECT_SPACE_DIR="/home/turtlebot/Documents/rosWS/custom_ros/devel"
+PROJECT_VERSION="0.0.0"

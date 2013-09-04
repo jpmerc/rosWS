@@ -7,6 +7,7 @@
 /home/turtlebot/Documents/rosWS/custom_ros/build/custom_navigation/CMakeFiles/custom_navigation_genpy.dir
 /home/turtlebot/Documents/rosWS/custom_ros/build/CMakeFiles/doxygen.dir
 /home/turtlebot/Documents/rosWS/custom_ros/build/custom_navigation/CMakeFiles/gyro_calibration.dir
+/home/turtlebot/Documents/rosWS/custom_ros/build/kinect_aux/CMakeFiles/kinect_aux_node.dir
 /home/turtlebot/Documents/rosWS/custom_ros/build/custom_navigation/CMakeFiles/odom_gyro.dir
 /home/turtlebot/Documents/rosWS/custom_ros/build/custom_navigation/CMakeFiles/robot_mover.dir
 /home/turtlebot/Documents/rosWS/custom_ros/build/custom_navigation/CMakeFiles/roscpp_generate_messages_cpp.dir

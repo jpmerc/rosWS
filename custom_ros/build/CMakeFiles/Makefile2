@@ -465,7 +465,7 @@ clean: custom_navigation/CMakeFiles/gyro_calibration.dir/clean
 custom_navigation/CMakeFiles/odom_gyro.dir/all: custom_navigation/CMakeFiles/custom_navigation_gencpp.dir/all
 	$(MAKE) -f custom_navigation/CMakeFiles/odom_gyro.dir/build.make custom_navigation/CMakeFiles/odom_gyro.dir/depend
 	$(MAKE) -f custom_navigation/CMakeFiles/odom_gyro.dir/build.make custom_navigation/CMakeFiles/odom_gyro.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/turtlebot/Documents/rosWS/custom_ros/build/CMakeFiles  17
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/turtlebot/Documents/rosWS/custom_ros/build/CMakeFiles  18
 	@echo "Built target odom_gyro"
 .PHONY : custom_navigation/CMakeFiles/odom_gyro.dir/all
 
@@ -500,7 +500,7 @@ clean: custom_navigation/CMakeFiles/odom_gyro.dir/clean
 custom_navigation/CMakeFiles/robot_mover.dir/all: custom_navigation/CMakeFiles/custom_navigation_gencpp.dir/all
 	$(MAKE) -f custom_navigation/CMakeFiles/robot_mover.dir/build.make custom_navigation/CMakeFiles/robot_mover.dir/depend
 	$(MAKE) -f custom_navigation/CMakeFiles/robot_mover.dir/build.make custom_navigation/CMakeFiles/robot_mover.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/turtlebot/Documents/rosWS/custom_ros/build/CMakeFiles  18
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/turtlebot/Documents/rosWS/custom_ros/build/CMakeFiles  19
 	@echo "Built target robot_mover"
 .PHONY : custom_navigation/CMakeFiles/robot_mover.dir/all
 
@@ -805,6 +805,56 @@ custom_navigation/CMakeFiles/tf_generate_messages_py.dir/clean:
 
 # clean rule for target.
 clean: custom_navigation/CMakeFiles/tf_generate_messages_py.dir/clean
+.PHONY : clean
+
+#=============================================================================
+# Directory level rules for directory kinect_aux
+
+# Convenience name for "all" pass in the directory.
+kinect_aux/all: kinect_aux/CMakeFiles/kinect_aux_node.dir/all
+.PHONY : kinect_aux/all
+
+# Convenience name for "clean" pass in the directory.
+kinect_aux/clean: kinect_aux/CMakeFiles/kinect_aux_node.dir/clean
+.PHONY : kinect_aux/clean
+
+# Convenience name for "preinstall" pass in the directory.
+kinect_aux/preinstall:
+.PHONY : kinect_aux/preinstall
+
+#=============================================================================
+# Target rules for target kinect_aux/CMakeFiles/kinect_aux_node.dir
+
+# All Build rule for target.
+kinect_aux/CMakeFiles/kinect_aux_node.dir/all:
+	$(MAKE) -f kinect_aux/CMakeFiles/kinect_aux_node.dir/build.make kinect_aux/CMakeFiles/kinect_aux_node.dir/depend
+	$(MAKE) -f kinect_aux/CMakeFiles/kinect_aux_node.dir/build.make kinect_aux/CMakeFiles/kinect_aux_node.dir/build
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/turtlebot/Documents/rosWS/custom_ros/build/CMakeFiles  17
+	@echo "Built target kinect_aux_node"
+.PHONY : kinect_aux/CMakeFiles/kinect_aux_node.dir/all
+
+# Include target in all.
+all: kinect_aux/CMakeFiles/kinect_aux_node.dir/all
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+kinect_aux/CMakeFiles/kinect_aux_node.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/turtlebot/Documents/rosWS/custom_ros/build/CMakeFiles 1
+	$(MAKE) -f CMakeFiles/Makefile2 kinect_aux/CMakeFiles/kinect_aux_node.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/turtlebot/Documents/rosWS/custom_ros/build/CMakeFiles 0
+.PHONY : kinect_aux/CMakeFiles/kinect_aux_node.dir/rule
+
+# Convenience name for target.
+kinect_aux_node: kinect_aux/CMakeFiles/kinect_aux_node.dir/rule
+.PHONY : kinect_aux_node
+
+# clean rule for target.
+kinect_aux/CMakeFiles/kinect_aux_node.dir/clean:
+	$(MAKE) -f kinect_aux/CMakeFiles/kinect_aux_node.dir/build.make kinect_aux/CMakeFiles/kinect_aux_node.dir/clean
+.PHONY : kinect_aux/CMakeFiles/kinect_aux_node.dir/clean
+
+# clean rule for target.
+clean: kinect_aux/CMakeFiles/kinect_aux_node.dir/clean
 .PHONY : clean
 
 #=============================================================================

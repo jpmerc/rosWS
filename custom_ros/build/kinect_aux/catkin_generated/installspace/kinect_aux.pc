@@ -1,0 +1,6 @@
+Name: kinect_aux
+Description: Description of kinect_aux
+Version: 0.0.0
+Cflags: -I/usr/include/libusb-1.0
+Libs: -L/home/turtlebot/Documents/rosWS/custom_ros/install/lib -lusb-1.0
+Requires: roscpp sensor_msgs std_msgs

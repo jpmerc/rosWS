@@ -15,10 +15,14 @@ SET(CMAKE_MAKEFILE_DEPENDS
   "custom_navigation/catkin_generated/ordered_paths.cmake"
   "custom_navigation/catkin_generated/package.cmake"
   "custom_navigation/cmake/custom_navigation-genmsg.cmake"
+  "kinect_aux/catkin_generated/ordered_paths.cmake"
+  "kinect_aux/catkin_generated/package.cmake"
   "/home/turtlebot/Documents/rosWS/custom_ros/devel/share/custom_navigation/cmake/custom_navigation-msg-paths.cmake"
   "/home/turtlebot/Documents/rosWS/custom_ros/src/CMakeLists.txt"
   "/home/turtlebot/Documents/rosWS/custom_ros/src/custom_navigation/CMakeLists.txt"
   "/home/turtlebot/Documents/rosWS/custom_ros/src/custom_navigation/package.xml"
+  "/home/turtlebot/Documents/rosWS/custom_ros/src/kinect_aux/CMakeLists.txt"
+  "/home/turtlebot/Documents/rosWS/custom_ros/src/kinect_aux/package.xml"
   "/opt/ros/groovy/share/catkin/cmake/../package.xml"
   "/opt/ros/groovy/share/catkin/cmake/all.cmake"
   "/opt/ros/groovy/share/catkin/cmake/assert.cmake"
@@ -134,6 +138,7 @@ SET(CMAKE_MAKEFILE_DEPENDS
   "/usr/share/cmake-2.8/Modules/FindGTest.cmake"
   "/usr/share/cmake-2.8/Modules/FindPackageHandleStandardArgs.cmake"
   "/usr/share/cmake-2.8/Modules/FindPackageMessage.cmake"
+  "/usr/share/cmake-2.8/Modules/FindPkgConfig.cmake"
   "/usr/share/cmake-2.8/Modules/FindPythonInterp.cmake"
   "/usr/share/cmake-2.8/Modules/Platform/Linux-GNU-C.cmake"
   "/usr/share/cmake-2.8/Modules/Platform/Linux-GNU-CXX.cmake"
@@ -152,6 +157,7 @@ SET(CMAKE_MAKEFILE_OUTPUTS
 SET(CMAKE_MAKEFILE_PRODUCTS
   "CMakeFiles/CMakeDirectoryInformation.cmake"
   "custom_navigation/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "kinect_aux/CMakeFiles/CMakeDirectoryInformation.cmake"
   )
 
 # Dependency information for all targets:
@@ -178,4 +184,5 @@ SET(CMAKE_DEPEND_INFO_FILES
   "custom_navigation/CMakeFiles/tf_generate_messages_cpp.dir/DependInfo.cmake"
   "custom_navigation/CMakeFiles/tf_generate_messages_lisp.dir/DependInfo.cmake"
   "custom_navigation/CMakeFiles/tf_generate_messages_py.dir/DependInfo.cmake"
+  "kinect_aux/CMakeFiles/kinect_aux_node.dir/DependInfo.cmake"
   )
