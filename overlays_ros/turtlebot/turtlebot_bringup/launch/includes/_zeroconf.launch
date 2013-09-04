@@ -1,4 +1,5 @@
 <launch>
+
   <node pkg="zeroconf_avahi" type="zeroconf" name="zeroconf_avahi" ns="zeroconf">
     <rosparam file="$(find turtlebot_bringup)/param/zeroconf.yaml" command="load"/>
     <!-- 
@@ -7,4 +8,5 @@
     </rosparam>
      -->
   </node>
+
 </launch>

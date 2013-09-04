@@ -45,7 +45,7 @@ generate_messages(
 catkin_package(
    INCLUDE_DIRS include
 #  LIBRARIES custom_navigation
-   CATKIN_DEPENDS message_generation roscpp sensor_msgs std_msgs
+   CATKIN_DEPENDS message_generation roscpp sensor_msgs std_msgs message_runtime
 #  DEPENDS system_lib
 )
 

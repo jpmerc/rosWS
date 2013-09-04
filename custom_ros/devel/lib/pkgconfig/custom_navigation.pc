@@ -3,4 +3,4 @@ Description: Description of custom_navigation
 Version: 1.0.0
 Cflags: -I/home/turtlebot/Documents/rosWS/custom_ros/devel/include -I/home/turtlebot/Documents/rosWS/custom_ros/src/custom_navigation/include
 Libs: -L/home/turtlebot/Documents/rosWS/custom_ros/devel/lib 
-Requires: message_generation roscpp sensor_msgs std_msgs
+Requires: message_generation roscpp sensor_msgs std_msgs message_runtime

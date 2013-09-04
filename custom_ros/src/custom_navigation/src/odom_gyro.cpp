@@ -130,9 +130,9 @@ int main(int argc, char **argv)
     ros::NodeHandle n;
     ros::Subscriber odom_subscriber;
     ros::Subscriber gyro_subscriber;
-    odom_subscriber = n.subscribe("/odom", 1, odom_callback);
-    gyro_subscriber = n.subscribe("/adcParams/gyroscope", 1, gyro_callback);
-    ros::Publisher odom_gyro_publisher = n.advertise<nav_msgs::Odometry>("/odom_gyro", 100);
+    odom_subscriber = n.subscribe("odom", 1, odom_callback);
+    gyro_subscriber = n.subscribe("adcParams/gyroscope", 1, gyro_callback);
+    ros::Publisher odom_gyro_publisher = n.advertise<nav_msgs::Odometry>("odom_gyro", 100);
 
     tf::TransformBroadcaster odom_broadcaster;
     geometry_msgs::TransformStamped odom_transform;

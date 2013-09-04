@@ -9,7 +9,9 @@
   <param name="turtlebot_node/gyro_scale_correction" value="1.062802"/>
   <param name="turtlebot_node/odom_angular_scale_correction" value="1.044974"/>
 
- <!-- <include file="$(find hokuyo_node)/hokuyo_test.launch"/> -->
+<!--<group ns="robot_0">
+  <param name="tf_prefix" value="robot_0" /> -->
+  <include file="$(find hokuyo_node)/hokuyo_test.launch"/>
   <include file="$(find turtlebot_bringup)/launch/includes/_zeroconf.launch"/>
   <include file="$(find turtlebot_bringup)/launch/includes/_robot.launch">
     <arg name="base" value="$(arg base)" />
@@ -23,4 +25,6 @@
     <arg name="battery" value="$(arg battery)" />
   </include>
   <include file="$(find turtlebot_bringup)/launch/includes/_app_manager.launch"/>
+<!--</group> -->
+
 </launch>

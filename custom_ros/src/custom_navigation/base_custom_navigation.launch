@@ -1,0 +1,6 @@
+<launch>
+  <node pkg="custom_navigation" type="adcDriver" name="adcDriver" respawn="false" />
+  <node pkg="custom_navigation" type="adcParams" name="adcParams" respawn="false" />
+  <node pkg="custom_navigation" type="odom_gyro" name="odom_gyro" respawn="false" />
+  <!-- <node pkg="tf" type="static_transform_publisher" name="link1_broadcaster" args="0 0 0 0 0 0 1 base_footprint imu 100 " /> -->
+</launch>

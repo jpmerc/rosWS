@@ -621,14 +621,14 @@ int main(int argc, char **argv)
     ros::NodeHandle n;
 
     //Node publishers
-    initPosePublisher = n.advertise<geometry_msgs::PoseWithCovarianceStamped>("/initialpose", 100);
+    initPosePublisher = n.advertise<geometry_msgs::PoseWithCovarianceStamped>("initialpose", 100);
     robotVelocityCommandsPublisher = n.advertise<geometry_msgs::Twist>("mobile_base/commands/velocity", 100);
     finalPosePublisher = n.advertise<geometry_msgs::PoseStamped>("move_base_simple/goal", 100);
 
     //Node subscribers
-    amcl_pose_subscriber = n.subscribe("/amcl_pose", 1, amcl_pose_callback);
-    moveBase_status_subscriber = n.subscribe("/move_base/status", 1, move_base_status_callback);
-    odom_gyro_subscriber =  n.subscribe("/odom_gyro", 1, odom_gyro_callback);
+    amcl_pose_subscriber = n.subscribe("amcl_pose", 1, amcl_pose_callback);
+    moveBase_status_subscriber = n.subscribe("move_base/status", 1, move_base_status_callback);
+    odom_gyro_subscriber =  n.subscribe("odom_gyro", 1, odom_gyro_callback);
 
     //Thread to execute the callbacks
     boost::thread spinThread(spinFunction);
