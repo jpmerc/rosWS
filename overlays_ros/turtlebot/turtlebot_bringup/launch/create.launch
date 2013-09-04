@@ -1,4 +1,6 @@
 <launch>
+
+  <arg name="robot_label" value="$(optenv TURTLEBOT_LABEL robot_0)" />
   <arg name="base"       value="$(optenv TURTLEBOT_BASE create)"/>  <!-- create, rhoomba -->
   <arg name="battery"    value="$(optenv TURTLEBOT_BATTERY /proc/acpi/battery/BAT0)"/>  <!-- /proc/acpi/battery/BAT0 -->
   <arg name="stacks"     value="$(optenv TURTLEBOT_STACKS circles)"/>  <!-- circles, hexagons -->
@@ -11,23 +13,23 @@
   <param name="turtlebot_node/gyro_scale_correction" value="1.062802"/>
   <param name="turtlebot_node/odom_angular_scale_correction" value="1.044974"/>
   <param name="robot_description" command="$(arg urdf_file)" /> 
-  <param name="robot/name" value="$(optenv ROBOT robot_0)"/>
+  <param name="robot/name" value="$(arg robot_label)"/>
   <param name="robot/type" value="turtlebot"/> 
   
   
 
-<group ns="robot_0">
+<group ns="$(arg robot_label)">
 
   
  <!-- Launch Hokuyo Range Finder -->
-  <node pkg="tf" type="static_transform_publisher" name="myLaserTF" args="0 0 0.075 0 0 0 robot_0/base_link robot_0/myLaser 100 " />
+  <node pkg="tf" type="static_transform_publisher" name="myLaserTF" args="0 0 0.075 0 0 0 $(arg robot_label)/base_link $(arg robot_label)/myLaser 100 " />
   <node name="hokuyo" pkg="hokuyo_node" type="hokuyo_node" respawn="false" output="screen">
     <param name="calibrate_time" type="bool" value="true"/> 
     <param name="port" type="string" value="/dev/ttyACM0"/> 
     <param name="intensity" type="bool" value="false"/>
     <param name="min_angle" type="double" value="-2.09"/>
     <param name="min_angle" type="double" value="2.09"/>
-    <param name="frame_id" type="string" value="/robot_0/myLaser"/> 
+    <param name="frame_id" type="string" value="/$(arg robot_label)/myLaser"/> 
     <param name="use_rep_117" type="bool" value="true"/>
   </node>
   
@@ -41,7 +43,7 @@
   <!-- Turtlebot Robot -->
   <node pkg="robot_state_publisher" type="robot_state_publisher" name="robot_state_publisher">
     <param name="publish_frequency" type="double" value="5.0" />
-    <param name="tf_prefix" value="robot_0" />
+    <param name="tf_prefix" value="$(arg robot_label)" />
   </node>
   <node pkg="diagnostic_aggregator" type="aggregator_node" name="diagnostic_aggregator" >
     <rosparam command="load" file="$(find turtlebot_bringup)/param/$(arg base)/diagnostics.yaml" />
