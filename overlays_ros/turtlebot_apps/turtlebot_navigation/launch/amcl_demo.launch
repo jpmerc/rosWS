@@ -1,5 +1,5 @@
 <launch>
-
+<arg name="robot_label" value="$(optenv TURTLEBOT_LABEL robot_0)" />
 
 <!--  <include file="$(find turtlebot_bringup)/launch/3dsensor.launch">
     <arg name="rgb_processing" value="false" />
@@ -23,8 +23,8 @@
 
 
 
-<group ns="robot_0">
-<param name="tf_prefix" value="robot_0" />
+<group ns="$(arg robot_label)">
+<param name="tf_prefix" value="$(arg robot_label)" />
 
   <node pkg="amcl" type="amcl" name="amcl" output="screen">
     <param name="use_map_topic" value="$(arg use_map_topic)"/>
