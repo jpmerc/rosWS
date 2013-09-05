@@ -1,7 +1,7 @@
 FILE(REMOVE_RECURSE
   "CMakeFiles/adcClient.dir/src/adcClient.cpp.o"
-  "/home/turtlebot/Documents/rosWS/custom_ros/devel/lib/custom_navigation/adcClient.pdb"
-  "/home/turtlebot/Documents/rosWS/custom_ros/devel/lib/custom_navigation/adcClient"
+  "/home/jp/Documents/rosWS/custom_ros/devel/lib/custom_navigation/adcClient.pdb"
+  "/home/jp/Documents/rosWS/custom_ros/devel/lib/custom_navigation/adcClient"
 )
 
 # Per-language clean rules from dependency scanning.

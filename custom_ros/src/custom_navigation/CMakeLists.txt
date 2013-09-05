@@ -4,7 +4,7 @@ project(custom_navigation)
 ## Find catkin macros and libraries
 ## if COMPONENTS list like find_package(catkin REQUIRED COMPONENTS xyz)
 ## is used, also find other catkin packages
-find_package(catkin REQUIRED COMPONENTS message_generation roscpp sensor_msgs std_msgs nav_msgs message_filters tf)
+find_package(catkin REQUIRED COMPONENTS message_generation roscpp sensor_msgs std_msgs nav_msgs message_filters tf pcl pcl_ros)
 
 ## Uncomment this if the package has a setup.py. This macro ensures
 ## modules and global scripts declared therein get installed
@@ -79,3 +79,11 @@ add_dependencies(gyro_calibration custom_navigation_gencpp)
 add_executable(robot_mover src/robot_mover.cpp)
 target_link_libraries(robot_mover ${catkin_LIBRARIES})
 add_dependencies(robot_mover custom_navigation_gencpp)
+
+add_executable(robot_obstacle src/robot_obstacle.cpp)
+target_link_libraries(robot_obstacle ${catkin_LIBRARIES})
+add_dependencies(robot_obstacle custom_navigation_gencpp)
+
+add_executable(robot_position src/robot_position.cpp)
+target_link_libraries(robot_position ${catkin_LIBRARIES})
+add_dependencies(robot_position custom_navigation_gencpp)

@@ -1,8 +1,8 @@
-# Install script for directory: /home/turtlebot/Documents/rosWS/custom_ros/src
+# Install script for directory: /home/jp/Documents/rosWS/custom_ros/src
 
 # Set the install prefix
 IF(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  SET(CMAKE_INSTALL_PREFIX "/home/turtlebot/Documents/rosWS/custom_ros/install")
+  SET(CMAKE_INSTALL_PREFIX "/home/jp/Documents/rosWS/custom_ros/install")
 ENDIF(NOT DEFINED CMAKE_INSTALL_PREFIX)
 STRING(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -34,50 +34,49 @@ ENDIF(NOT DEFINED CMAKE_INSTALL_SO_NO_EXE)
 
 IF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
   list(APPEND CPACK_ABSOLUTE_DESTINATION_FILES
-   "/home/turtlebot/Documents/rosWS/custom_ros/install/.catkin")
-FILE(INSTALL DESTINATION "/home/turtlebot/Documents/rosWS/custom_ros/install" TYPE FILE FILES "/home/turtlebot/Documents/rosWS/custom_ros/build/catkin_generated/installspace/.catkin")
+   "/home/jp/Documents/rosWS/custom_ros/install/.catkin")
+FILE(INSTALL DESTINATION "/home/jp/Documents/rosWS/custom_ros/install" TYPE FILE FILES "/home/jp/Documents/rosWS/custom_ros/build/catkin_generated/installspace/.catkin")
 ENDIF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
 
 IF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
   list(APPEND CPACK_ABSOLUTE_DESTINATION_FILES
-   "/home/turtlebot/Documents/rosWS/custom_ros/install/_setup_util.py")
-FILE(INSTALL DESTINATION "/home/turtlebot/Documents/rosWS/custom_ros/install" TYPE PROGRAM FILES "/home/turtlebot/Documents/rosWS/custom_ros/build/catkin_generated/installspace/_setup_util.py")
+   "/home/jp/Documents/rosWS/custom_ros/install/_setup_util.py")
+FILE(INSTALL DESTINATION "/home/jp/Documents/rosWS/custom_ros/install" TYPE PROGRAM FILES "/home/jp/Documents/rosWS/custom_ros/build/catkin_generated/installspace/_setup_util.py")
 ENDIF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
 
 IF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
   list(APPEND CPACK_ABSOLUTE_DESTINATION_FILES
-   "/home/turtlebot/Documents/rosWS/custom_ros/install/env.sh")
-FILE(INSTALL DESTINATION "/home/turtlebot/Documents/rosWS/custom_ros/install" TYPE PROGRAM FILES "/home/turtlebot/Documents/rosWS/custom_ros/build/catkin_generated/installspace/env.sh")
+   "/home/jp/Documents/rosWS/custom_ros/install/env.sh")
+FILE(INSTALL DESTINATION "/home/jp/Documents/rosWS/custom_ros/install" TYPE PROGRAM FILES "/home/jp/Documents/rosWS/custom_ros/build/catkin_generated/installspace/env.sh")
 ENDIF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
 
 IF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
   list(APPEND CPACK_ABSOLUTE_DESTINATION_FILES
-   "/home/turtlebot/Documents/rosWS/custom_ros/install/setup.bash")
-FILE(INSTALL DESTINATION "/home/turtlebot/Documents/rosWS/custom_ros/install" TYPE FILE FILES "/home/turtlebot/Documents/rosWS/custom_ros/build/catkin_generated/installspace/setup.bash")
+   "/home/jp/Documents/rosWS/custom_ros/install/setup.bash")
+FILE(INSTALL DESTINATION "/home/jp/Documents/rosWS/custom_ros/install" TYPE FILE FILES "/home/jp/Documents/rosWS/custom_ros/build/catkin_generated/installspace/setup.bash")
 ENDIF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
 
 IF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
   list(APPEND CPACK_ABSOLUTE_DESTINATION_FILES
-   "/home/turtlebot/Documents/rosWS/custom_ros/install/setup.sh")
-FILE(INSTALL DESTINATION "/home/turtlebot/Documents/rosWS/custom_ros/install" TYPE FILE FILES "/home/turtlebot/Documents/rosWS/custom_ros/build/catkin_generated/installspace/setup.sh")
+   "/home/jp/Documents/rosWS/custom_ros/install/setup.sh")
+FILE(INSTALL DESTINATION "/home/jp/Documents/rosWS/custom_ros/install" TYPE FILE FILES "/home/jp/Documents/rosWS/custom_ros/build/catkin_generated/installspace/setup.sh")
 ENDIF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
 
 IF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
   list(APPEND CPACK_ABSOLUTE_DESTINATION_FILES
-   "/home/turtlebot/Documents/rosWS/custom_ros/install/setup.zsh")
-FILE(INSTALL DESTINATION "/home/turtlebot/Documents/rosWS/custom_ros/install" TYPE FILE FILES "/home/turtlebot/Documents/rosWS/custom_ros/build/catkin_generated/installspace/setup.zsh")
+   "/home/jp/Documents/rosWS/custom_ros/install/setup.zsh")
+FILE(INSTALL DESTINATION "/home/jp/Documents/rosWS/custom_ros/install" TYPE FILE FILES "/home/jp/Documents/rosWS/custom_ros/build/catkin_generated/installspace/setup.zsh")
 ENDIF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
 
 IF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
   list(APPEND CPACK_ABSOLUTE_DESTINATION_FILES
-   "/home/turtlebot/Documents/rosWS/custom_ros/install/.rosinstall")
-FILE(INSTALL DESTINATION "/home/turtlebot/Documents/rosWS/custom_ros/install" TYPE FILE FILES "/home/turtlebot/Documents/rosWS/custom_ros/build/catkin_generated/installspace/.rosinstall")
+   "/home/jp/Documents/rosWS/custom_ros/install/.rosinstall")
+FILE(INSTALL DESTINATION "/home/jp/Documents/rosWS/custom_ros/install" TYPE FILE FILES "/home/jp/Documents/rosWS/custom_ros/build/catkin_generated/installspace/.rosinstall")
 ENDIF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
 
 IF(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  INCLUDE("/home/turtlebot/Documents/rosWS/custom_ros/build/custom_navigation/cmake_install.cmake")
-  INCLUDE("/home/turtlebot/Documents/rosWS/custom_ros/build/kinect_aux/cmake_install.cmake")
+  INCLUDE("/home/jp/Documents/rosWS/custom_ros/build/custom_navigation/cmake_install.cmake")
 
 ENDIF(NOT CMAKE_INSTALL_LOCAL_ONLY)
 
@@ -87,7 +86,7 @@ ELSE(CMAKE_INSTALL_COMPONENT)
   SET(CMAKE_INSTALL_MANIFEST "install_manifest.txt")
 ENDIF(CMAKE_INSTALL_COMPONENT)
 
-FILE(WRITE "/home/turtlebot/Documents/rosWS/custom_ros/build/${CMAKE_INSTALL_MANIFEST}" "")
+FILE(WRITE "/home/jp/Documents/rosWS/custom_ros/build/${CMAKE_INSTALL_MANIFEST}" "")
 FOREACH(file ${CMAKE_INSTALL_MANIFEST_FILES})
-  FILE(APPEND "/home/turtlebot/Documents/rosWS/custom_ros/build/${CMAKE_INSTALL_MANIFEST}" "${file}\n")
+  FILE(APPEND "/home/jp/Documents/rosWS/custom_ros/build/${CMAKE_INSTALL_MANIFEST}" "${file}\n")
 ENDFOREACH(file)

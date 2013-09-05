@@ -32,10 +32,10 @@ CMAKE_COMMAND = /usr/bin/cmake
 RM = /usr/bin/cmake -E remove -f
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/turtlebot/Documents/rosWS/custom_ros/src
+CMAKE_SOURCE_DIR = /home/jp/Documents/rosWS/custom_ros/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/turtlebot/Documents/rosWS/custom_ros/build
+CMAKE_BINARY_DIR = /home/jp/Documents/rosWS/custom_ros/build
 
 # Utility rule file for tf_generate_messages_cpp.
 
@@ -50,10 +50,10 @@ custom_navigation/CMakeFiles/tf_generate_messages_cpp.dir/build: tf_generate_mes
 .PHONY : custom_navigation/CMakeFiles/tf_generate_messages_cpp.dir/build
 
 custom_navigation/CMakeFiles/tf_generate_messages_cpp.dir/clean:
-	cd /home/turtlebot/Documents/rosWS/custom_ros/build/custom_navigation && $(CMAKE_COMMAND) -P CMakeFiles/tf_generate_messages_cpp.dir/cmake_clean.cmake
+	cd /home/jp/Documents/rosWS/custom_ros/build/custom_navigation && $(CMAKE_COMMAND) -P CMakeFiles/tf_generate_messages_cpp.dir/cmake_clean.cmake
 .PHONY : custom_navigation/CMakeFiles/tf_generate_messages_cpp.dir/clean
 
 custom_navigation/CMakeFiles/tf_generate_messages_cpp.dir/depend:
-	cd /home/turtlebot/Documents/rosWS/custom_ros/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/turtlebot/Documents/rosWS/custom_ros/src /home/turtlebot/Documents/rosWS/custom_ros/src/custom_navigation /home/turtlebot/Documents/rosWS/custom_ros/build /home/turtlebot/Documents/rosWS/custom_ros/build/custom_navigation /home/turtlebot/Documents/rosWS/custom_ros/build/custom_navigation/CMakeFiles/tf_generate_messages_cpp.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/jp/Documents/rosWS/custom_ros/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/jp/Documents/rosWS/custom_ros/src /home/jp/Documents/rosWS/custom_ros/src/custom_navigation /home/jp/Documents/rosWS/custom_ros/build /home/jp/Documents/rosWS/custom_ros/build/custom_navigation /home/jp/Documents/rosWS/custom_ros/build/custom_navigation/CMakeFiles/tf_generate_messages_cpp.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : custom_navigation/CMakeFiles/tf_generate_messages_cpp.dir/depend
 

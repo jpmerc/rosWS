@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/turtlebot/Documents/rosWS/custom_ros/src/custom_navigation/src/odom_gyro.cpp
+/home/jp/Documents/rosWS/custom_ros/src/custom_navigation/src/odom_gyro.cpp
 ros/ros.h
 -
 sensor_msgs/Imu.h

@@ -2,7 +2,7 @@
 
 message(STATUS "custom_navigation: 1 messages, 2 services")
 
-set(MSG_I_FLAGS "-Icustom_navigation:/home/turtlebot/Documents/rosWS/custom_ros/src/custom_navigation/msg;-Isensor_msgs:/opt/ros/groovy/share/sensor_msgs/msg;-Istd_msgs:/opt/ros/groovy/share/std_msgs/msg;-Igeometry_msgs:/opt/ros/groovy/share/geometry_msgs/msg")
+set(MSG_I_FLAGS "-Icustom_navigation:/home/jp/Documents/rosWS/custom_ros/src/custom_navigation/msg;-Isensor_msgs:/opt/ros/groovy/share/sensor_msgs/msg;-Istd_msgs:/opt/ros/groovy/share/std_msgs/msg;-Igeometry_msgs:/opt/ros/groovy/share/geometry_msgs/msg")
 
 # Find all generators
 find_package(gencpp REQUIRED)
@@ -19,7 +19,7 @@ set (ALL_GEN_OUTPUT_FILES_cpp "")
 ### Section generating for lang: gencpp
 ### Generating Messages
 _generate_msg_cpp(custom_navigation
-  /home/turtlebot/Documents/rosWS/custom_ros/src/custom_navigation/msg/M_ADC.msg
+  /home/jp/Documents/rosWS/custom_ros/src/custom_navigation/msg/M_ADC.msg
   "${MSG_I_FLAGS}"
   "/opt/ros/groovy/share/std_msgs/msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/custom_navigation
@@ -27,13 +27,13 @@ _generate_msg_cpp(custom_navigation
 
 ### Generating Services
 _generate_srv_cpp(custom_navigation
-  /home/turtlebot/Documents/rosWS/custom_ros/src/custom_navigation/srv/S_ADC.srv
+  /home/jp/Documents/rosWS/custom_ros/src/custom_navigation/srv/S_ADC.srv
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/custom_navigation
 )
 _generate_srv_cpp(custom_navigation
-  /home/turtlebot/Documents/rosWS/custom_ros/src/custom_navigation/srv/S_DigitalOut.srv
+  /home/jp/Documents/rosWS/custom_ros/src/custom_navigation/srv/S_DigitalOut.srv
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/custom_navigation
@@ -52,7 +52,7 @@ add_custom_target(custom_navigation_gencpp ALL
 ### Section generating for lang: genlisp
 ### Generating Messages
 _generate_msg_lisp(custom_navigation
-  /home/turtlebot/Documents/rosWS/custom_ros/src/custom_navigation/msg/M_ADC.msg
+  /home/jp/Documents/rosWS/custom_ros/src/custom_navigation/msg/M_ADC.msg
   "${MSG_I_FLAGS}"
   "/opt/ros/groovy/share/std_msgs/msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/custom_navigation
@@ -60,13 +60,13 @@ _generate_msg_lisp(custom_navigation
 
 ### Generating Services
 _generate_srv_lisp(custom_navigation
-  /home/turtlebot/Documents/rosWS/custom_ros/src/custom_navigation/srv/S_ADC.srv
+  /home/jp/Documents/rosWS/custom_ros/src/custom_navigation/srv/S_ADC.srv
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/custom_navigation
 )
 _generate_srv_lisp(custom_navigation
-  /home/turtlebot/Documents/rosWS/custom_ros/src/custom_navigation/srv/S_DigitalOut.srv
+  /home/jp/Documents/rosWS/custom_ros/src/custom_navigation/srv/S_DigitalOut.srv
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/custom_navigation
@@ -85,7 +85,7 @@ add_custom_target(custom_navigation_genlisp ALL
 ### Section generating for lang: genpy
 ### Generating Messages
 _generate_msg_py(custom_navigation
-  /home/turtlebot/Documents/rosWS/custom_ros/src/custom_navigation/msg/M_ADC.msg
+  /home/jp/Documents/rosWS/custom_ros/src/custom_navigation/msg/M_ADC.msg
   "${MSG_I_FLAGS}"
   "/opt/ros/groovy/share/std_msgs/msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/custom_navigation
@@ -93,13 +93,13 @@ _generate_msg_py(custom_navigation
 
 ### Generating Services
 _generate_srv_py(custom_navigation
-  /home/turtlebot/Documents/rosWS/custom_ros/src/custom_navigation/srv/S_ADC.srv
+  /home/jp/Documents/rosWS/custom_ros/src/custom_navigation/srv/S_ADC.srv
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/custom_navigation
 )
 _generate_srv_py(custom_navigation
-  /home/turtlebot/Documents/rosWS/custom_ros/src/custom_navigation/srv/S_DigitalOut.srv
+  /home/jp/Documents/rosWS/custom_ros/src/custom_navigation/srv/S_DigitalOut.srv
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/custom_navigation

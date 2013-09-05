@@ -1,7 +1,7 @@
 FILE(REMOVE_RECURSE
   "CMakeFiles/robot_mover.dir/src/robot_mover.cpp.o"
-  "/home/turtlebot/Documents/rosWS/custom_ros/devel/lib/custom_navigation/robot_mover.pdb"
-  "/home/turtlebot/Documents/rosWS/custom_ros/devel/lib/custom_navigation/robot_mover"
+  "/home/jp/Documents/rosWS/custom_ros/devel/lib/custom_navigation/robot_mover.pdb"
+  "/home/jp/Documents/rosWS/custom_ros/devel/lib/custom_navigation/robot_mover"
 )
 
 # Per-language clean rules from dependency scanning.

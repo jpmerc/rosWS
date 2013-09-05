@@ -2,4 +2,4 @@
 # generated from catkin/cmake/templates/setup.bash.in
 
 CATKIN_SHELL=bash
-. "/home/turtlebot/Documents/rosWS/custom_ros/devel/setup.sh"
+. "/home/jp/Documents/rosWS/custom_ros/devel/setup.sh"

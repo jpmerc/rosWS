@@ -1,4 +1,0 @@
-bool[4] outputState
----
-int8 ret
-float64 timestampSet

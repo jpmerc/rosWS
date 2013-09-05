@@ -36,10 +36,10 @@ CMAKE_COMMAND = /usr/bin/cmake
 RM = /usr/bin/cmake -E remove -f
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/turtlebot/Documents/rosWS/custom_ros/src
+CMAKE_SOURCE_DIR = /home/jp/Documents/rosWS/custom_ros/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/turtlebot/Documents/rosWS/custom_ros/build
+CMAKE_BINARY_DIR = /home/jp/Documents/rosWS/custom_ros/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -107,14 +107,14 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/turtlebot/Documents/rosWS/custom_ros/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/turtlebot/Documents/rosWS/custom_ros/build/CMakeFiles /home/turtlebot/Documents/rosWS/custom_ros/build/custom_navigation/CMakeFiles/progress.marks
-	cd /home/turtlebot/Documents/rosWS/custom_ros/build && $(MAKE) -f CMakeFiles/Makefile2 custom_navigation/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/turtlebot/Documents/rosWS/custom_ros/build/CMakeFiles 0
+	cd /home/jp/Documents/rosWS/custom_ros/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/jp/Documents/rosWS/custom_ros/build/CMakeFiles /home/jp/Documents/rosWS/custom_ros/build/custom_navigation/CMakeFiles/progress.marks
+	cd /home/jp/Documents/rosWS/custom_ros/build && $(MAKE) -f CMakeFiles/Makefile2 custom_navigation/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/jp/Documents/rosWS/custom_ros/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/turtlebot/Documents/rosWS/custom_ros/build && $(MAKE) -f CMakeFiles/Makefile2 custom_navigation/clean
+	cd /home/jp/Documents/rosWS/custom_ros/build && $(MAKE) -f CMakeFiles/Makefile2 custom_navigation/clean
 .PHONY : clean
 
 # The main clean target
@@ -123,22 +123,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/turtlebot/Documents/rosWS/custom_ros/build && $(MAKE) -f CMakeFiles/Makefile2 custom_navigation/preinstall
+	cd /home/jp/Documents/rosWS/custom_ros/build && $(MAKE) -f CMakeFiles/Makefile2 custom_navigation/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/turtlebot/Documents/rosWS/custom_ros/build && $(MAKE) -f CMakeFiles/Makefile2 custom_navigation/preinstall
+	cd /home/jp/Documents/rosWS/custom_ros/build && $(MAKE) -f CMakeFiles/Makefile2 custom_navigation/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/turtlebot/Documents/rosWS/custom_ros/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/jp/Documents/rosWS/custom_ros/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 custom_navigation/CMakeFiles/adcClient.dir/rule:
-	cd /home/turtlebot/Documents/rosWS/custom_ros/build && $(MAKE) -f CMakeFiles/Makefile2 custom_navigation/CMakeFiles/adcClient.dir/rule
+	cd /home/jp/Documents/rosWS/custom_ros/build && $(MAKE) -f CMakeFiles/Makefile2 custom_navigation/CMakeFiles/adcClient.dir/rule
 .PHONY : custom_navigation/CMakeFiles/adcClient.dir/rule
 
 # Convenience name for target.
@@ -147,12 +147,12 @@ adcClient: custom_navigation/CMakeFiles/adcClient.dir/rule
 
 # fast build rule for target.
 adcClient/fast:
-	cd /home/turtlebot/Documents/rosWS/custom_ros/build && $(MAKE) -f custom_navigation/CMakeFiles/adcClient.dir/build.make custom_navigation/CMakeFiles/adcClient.dir/build
+	cd /home/jp/Documents/rosWS/custom_ros/build && $(MAKE) -f custom_navigation/CMakeFiles/adcClient.dir/build.make custom_navigation/CMakeFiles/adcClient.dir/build
 .PHONY : adcClient/fast
 
 # Convenience name for target.
 custom_navigation/CMakeFiles/adcDriver.dir/rule:
-	cd /home/turtlebot/Documents/rosWS/custom_ros/build && $(MAKE) -f CMakeFiles/Makefile2 custom_navigation/CMakeFiles/adcDriver.dir/rule
+	cd /home/jp/Documents/rosWS/custom_ros/build && $(MAKE) -f CMakeFiles/Makefile2 custom_navigation/CMakeFiles/adcDriver.dir/rule
 .PHONY : custom_navigation/CMakeFiles/adcDriver.dir/rule
 
 # Convenience name for target.
@@ -161,12 +161,12 @@ adcDriver: custom_navigation/CMakeFiles/adcDriver.dir/rule
 
 # fast build rule for target.
 adcDriver/fast:
-	cd /home/turtlebot/Documents/rosWS/custom_ros/build && $(MAKE) -f custom_navigation/CMakeFiles/adcDriver.dir/build.make custom_navigation/CMakeFiles/adcDriver.dir/build
+	cd /home/jp/Documents/rosWS/custom_ros/build && $(MAKE) -f custom_navigation/CMakeFiles/adcDriver.dir/build.make custom_navigation/CMakeFiles/adcDriver.dir/build
 .PHONY : adcDriver/fast
 
 # Convenience name for target.
 custom_navigation/CMakeFiles/adcParams.dir/rule:
-	cd /home/turtlebot/Documents/rosWS/custom_ros/build && $(MAKE) -f CMakeFiles/Makefile2 custom_navigation/CMakeFiles/adcParams.dir/rule
+	cd /home/jp/Documents/rosWS/custom_ros/build && $(MAKE) -f CMakeFiles/Makefile2 custom_navigation/CMakeFiles/adcParams.dir/rule
 .PHONY : custom_navigation/CMakeFiles/adcParams.dir/rule
 
 # Convenience name for target.
@@ -175,12 +175,12 @@ adcParams: custom_navigation/CMakeFiles/adcParams.dir/rule
 
 # fast build rule for target.
 adcParams/fast:
-	cd /home/turtlebot/Documents/rosWS/custom_ros/build && $(MAKE) -f custom_navigation/CMakeFiles/adcParams.dir/build.make custom_navigation/CMakeFiles/adcParams.dir/build
+	cd /home/jp/Documents/rosWS/custom_ros/build && $(MAKE) -f custom_navigation/CMakeFiles/adcParams.dir/build.make custom_navigation/CMakeFiles/adcParams.dir/build
 .PHONY : adcParams/fast
 
 # Convenience name for target.
 custom_navigation/CMakeFiles/custom_navigation_gencpp.dir/rule:
-	cd /home/turtlebot/Documents/rosWS/custom_ros/build && $(MAKE) -f CMakeFiles/Makefile2 custom_navigation/CMakeFiles/custom_navigation_gencpp.dir/rule
+	cd /home/jp/Documents/rosWS/custom_ros/build && $(MAKE) -f CMakeFiles/Makefile2 custom_navigation/CMakeFiles/custom_navigation_gencpp.dir/rule
 .PHONY : custom_navigation/CMakeFiles/custom_navigation_gencpp.dir/rule
 
 # Convenience name for target.
@@ -189,12 +189,12 @@ custom_navigation_gencpp: custom_navigation/CMakeFiles/custom_navigation_gencpp.
 
 # fast build rule for target.
 custom_navigation_gencpp/fast:
-	cd /home/turtlebot/Documents/rosWS/custom_ros/build && $(MAKE) -f custom_navigation/CMakeFiles/custom_navigation_gencpp.dir/build.make custom_navigation/CMakeFiles/custom_navigation_gencpp.dir/build
+	cd /home/jp/Documents/rosWS/custom_ros/build && $(MAKE) -f custom_navigation/CMakeFiles/custom_navigation_gencpp.dir/build.make custom_navigation/CMakeFiles/custom_navigation_gencpp.dir/build
 .PHONY : custom_navigation_gencpp/fast
 
 # Convenience name for target.
 custom_navigation/CMakeFiles/custom_navigation_genlisp.dir/rule:
-	cd /home/turtlebot/Documents/rosWS/custom_ros/build && $(MAKE) -f CMakeFiles/Makefile2 custom_navigation/CMakeFiles/custom_navigation_genlisp.dir/rule
+	cd /home/jp/Documents/rosWS/custom_ros/build && $(MAKE) -f CMakeFiles/Makefile2 custom_navigation/CMakeFiles/custom_navigation_genlisp.dir/rule
 .PHONY : custom_navigation/CMakeFiles/custom_navigation_genlisp.dir/rule
 
 # Convenience name for target.
@@ -203,12 +203,12 @@ custom_navigation_genlisp: custom_navigation/CMakeFiles/custom_navigation_genlis
 
 # fast build rule for target.
 custom_navigation_genlisp/fast:
-	cd /home/turtlebot/Documents/rosWS/custom_ros/build && $(MAKE) -f custom_navigation/CMakeFiles/custom_navigation_genlisp.dir/build.make custom_navigation/CMakeFiles/custom_navigation_genlisp.dir/build
+	cd /home/jp/Documents/rosWS/custom_ros/build && $(MAKE) -f custom_navigation/CMakeFiles/custom_navigation_genlisp.dir/build.make custom_navigation/CMakeFiles/custom_navigation_genlisp.dir/build
 .PHONY : custom_navigation_genlisp/fast
 
 # Convenience name for target.
 custom_navigation/CMakeFiles/custom_navigation_genpy.dir/rule:
-	cd /home/turtlebot/Documents/rosWS/custom_ros/build && $(MAKE) -f CMakeFiles/Makefile2 custom_navigation/CMakeFiles/custom_navigation_genpy.dir/rule
+	cd /home/jp/Documents/rosWS/custom_ros/build && $(MAKE) -f CMakeFiles/Makefile2 custom_navigation/CMakeFiles/custom_navigation_genpy.dir/rule
 .PHONY : custom_navigation/CMakeFiles/custom_navigation_genpy.dir/rule
 
 # Convenience name for target.
@@ -217,12 +217,12 @@ custom_navigation_genpy: custom_navigation/CMakeFiles/custom_navigation_genpy.di
 
 # fast build rule for target.
 custom_navigation_genpy/fast:
-	cd /home/turtlebot/Documents/rosWS/custom_ros/build && $(MAKE) -f custom_navigation/CMakeFiles/custom_navigation_genpy.dir/build.make custom_navigation/CMakeFiles/custom_navigation_genpy.dir/build
+	cd /home/jp/Documents/rosWS/custom_ros/build && $(MAKE) -f custom_navigation/CMakeFiles/custom_navigation_genpy.dir/build.make custom_navigation/CMakeFiles/custom_navigation_genpy.dir/build
 .PHONY : custom_navigation_genpy/fast
 
 # Convenience name for target.
 custom_navigation/CMakeFiles/gyro_calibration.dir/rule:
-	cd /home/turtlebot/Documents/rosWS/custom_ros/build && $(MAKE) -f CMakeFiles/Makefile2 custom_navigation/CMakeFiles/gyro_calibration.dir/rule
+	cd /home/jp/Documents/rosWS/custom_ros/build && $(MAKE) -f CMakeFiles/Makefile2 custom_navigation/CMakeFiles/gyro_calibration.dir/rule
 .PHONY : custom_navigation/CMakeFiles/gyro_calibration.dir/rule
 
 # Convenience name for target.
@@ -231,12 +231,12 @@ gyro_calibration: custom_navigation/CMakeFiles/gyro_calibration.dir/rule
 
 # fast build rule for target.
 gyro_calibration/fast:
-	cd /home/turtlebot/Documents/rosWS/custom_ros/build && $(MAKE) -f custom_navigation/CMakeFiles/gyro_calibration.dir/build.make custom_navigation/CMakeFiles/gyro_calibration.dir/build
+	cd /home/jp/Documents/rosWS/custom_ros/build && $(MAKE) -f custom_navigation/CMakeFiles/gyro_calibration.dir/build.make custom_navigation/CMakeFiles/gyro_calibration.dir/build
 .PHONY : gyro_calibration/fast
 
 # Convenience name for target.
 custom_navigation/CMakeFiles/odom_gyro.dir/rule:
-	cd /home/turtlebot/Documents/rosWS/custom_ros/build && $(MAKE) -f CMakeFiles/Makefile2 custom_navigation/CMakeFiles/odom_gyro.dir/rule
+	cd /home/jp/Documents/rosWS/custom_ros/build && $(MAKE) -f CMakeFiles/Makefile2 custom_navigation/CMakeFiles/odom_gyro.dir/rule
 .PHONY : custom_navigation/CMakeFiles/odom_gyro.dir/rule
 
 # Convenience name for target.
@@ -245,12 +245,26 @@ odom_gyro: custom_navigation/CMakeFiles/odom_gyro.dir/rule
 
 # fast build rule for target.
 odom_gyro/fast:
-	cd /home/turtlebot/Documents/rosWS/custom_ros/build && $(MAKE) -f custom_navigation/CMakeFiles/odom_gyro.dir/build.make custom_navigation/CMakeFiles/odom_gyro.dir/build
+	cd /home/jp/Documents/rosWS/custom_ros/build && $(MAKE) -f custom_navigation/CMakeFiles/odom_gyro.dir/build.make custom_navigation/CMakeFiles/odom_gyro.dir/build
 .PHONY : odom_gyro/fast
 
 # Convenience name for target.
+custom_navigation/CMakeFiles/pcl_ros_gencfg.dir/rule:
+	cd /home/jp/Documents/rosWS/custom_ros/build && $(MAKE) -f CMakeFiles/Makefile2 custom_navigation/CMakeFiles/pcl_ros_gencfg.dir/rule
+.PHONY : custom_navigation/CMakeFiles/pcl_ros_gencfg.dir/rule
+
+# Convenience name for target.
+pcl_ros_gencfg: custom_navigation/CMakeFiles/pcl_ros_gencfg.dir/rule
+.PHONY : pcl_ros_gencfg
+
+# fast build rule for target.
+pcl_ros_gencfg/fast:
+	cd /home/jp/Documents/rosWS/custom_ros/build && $(MAKE) -f custom_navigation/CMakeFiles/pcl_ros_gencfg.dir/build.make custom_navigation/CMakeFiles/pcl_ros_gencfg.dir/build
+.PHONY : pcl_ros_gencfg/fast
+
+# Convenience name for target.
 custom_navigation/CMakeFiles/robot_mover.dir/rule:
-	cd /home/turtlebot/Documents/rosWS/custom_ros/build && $(MAKE) -f CMakeFiles/Makefile2 custom_navigation/CMakeFiles/robot_mover.dir/rule
+	cd /home/jp/Documents/rosWS/custom_ros/build && $(MAKE) -f CMakeFiles/Makefile2 custom_navigation/CMakeFiles/robot_mover.dir/rule
 .PHONY : custom_navigation/CMakeFiles/robot_mover.dir/rule
 
 # Convenience name for target.
@@ -259,12 +273,40 @@ robot_mover: custom_navigation/CMakeFiles/robot_mover.dir/rule
 
 # fast build rule for target.
 robot_mover/fast:
-	cd /home/turtlebot/Documents/rosWS/custom_ros/build && $(MAKE) -f custom_navigation/CMakeFiles/robot_mover.dir/build.make custom_navigation/CMakeFiles/robot_mover.dir/build
+	cd /home/jp/Documents/rosWS/custom_ros/build && $(MAKE) -f custom_navigation/CMakeFiles/robot_mover.dir/build.make custom_navigation/CMakeFiles/robot_mover.dir/build
 .PHONY : robot_mover/fast
 
 # Convenience name for target.
+custom_navigation/CMakeFiles/robot_obstacle.dir/rule:
+	cd /home/jp/Documents/rosWS/custom_ros/build && $(MAKE) -f CMakeFiles/Makefile2 custom_navigation/CMakeFiles/robot_obstacle.dir/rule
+.PHONY : custom_navigation/CMakeFiles/robot_obstacle.dir/rule
+
+# Convenience name for target.
+robot_obstacle: custom_navigation/CMakeFiles/robot_obstacle.dir/rule
+.PHONY : robot_obstacle
+
+# fast build rule for target.
+robot_obstacle/fast:
+	cd /home/jp/Documents/rosWS/custom_ros/build && $(MAKE) -f custom_navigation/CMakeFiles/robot_obstacle.dir/build.make custom_navigation/CMakeFiles/robot_obstacle.dir/build
+.PHONY : robot_obstacle/fast
+
+# Convenience name for target.
+custom_navigation/CMakeFiles/robot_position.dir/rule:
+	cd /home/jp/Documents/rosWS/custom_ros/build && $(MAKE) -f CMakeFiles/Makefile2 custom_navigation/CMakeFiles/robot_position.dir/rule
+.PHONY : custom_navigation/CMakeFiles/robot_position.dir/rule
+
+# Convenience name for target.
+robot_position: custom_navigation/CMakeFiles/robot_position.dir/rule
+.PHONY : robot_position
+
+# fast build rule for target.
+robot_position/fast:
+	cd /home/jp/Documents/rosWS/custom_ros/build && $(MAKE) -f custom_navigation/CMakeFiles/robot_position.dir/build.make custom_navigation/CMakeFiles/robot_position.dir/build
+.PHONY : robot_position/fast
+
+# Convenience name for target.
 custom_navigation/CMakeFiles/roscpp_generate_messages_cpp.dir/rule:
-	cd /home/turtlebot/Documents/rosWS/custom_ros/build && $(MAKE) -f CMakeFiles/Makefile2 custom_navigation/CMakeFiles/roscpp_generate_messages_cpp.dir/rule
+	cd /home/jp/Documents/rosWS/custom_ros/build && $(MAKE) -f CMakeFiles/Makefile2 custom_navigation/CMakeFiles/roscpp_generate_messages_cpp.dir/rule
 .PHONY : custom_navigation/CMakeFiles/roscpp_generate_messages_cpp.dir/rule
 
 # Convenience name for target.
@@ -273,12 +315,12 @@ roscpp_generate_messages_cpp: custom_navigation/CMakeFiles/roscpp_generate_messa
 
 # fast build rule for target.
 roscpp_generate_messages_cpp/fast:
-	cd /home/turtlebot/Documents/rosWS/custom_ros/build && $(MAKE) -f custom_navigation/CMakeFiles/roscpp_generate_messages_cpp.dir/build.make custom_navigation/CMakeFiles/roscpp_generate_messages_cpp.dir/build
+	cd /home/jp/Documents/rosWS/custom_ros/build && $(MAKE) -f custom_navigation/CMakeFiles/roscpp_generate_messages_cpp.dir/build.make custom_navigation/CMakeFiles/roscpp_generate_messages_cpp.dir/build
 .PHONY : roscpp_generate_messages_cpp/fast
 
 # Convenience name for target.
 custom_navigation/CMakeFiles/roscpp_generate_messages_lisp.dir/rule:
-	cd /home/turtlebot/Documents/rosWS/custom_ros/build && $(MAKE) -f CMakeFiles/Makefile2 custom_navigation/CMakeFiles/roscpp_generate_messages_lisp.dir/rule
+	cd /home/jp/Documents/rosWS/custom_ros/build && $(MAKE) -f CMakeFiles/Makefile2 custom_navigation/CMakeFiles/roscpp_generate_messages_lisp.dir/rule
 .PHONY : custom_navigation/CMakeFiles/roscpp_generate_messages_lisp.dir/rule
 
 # Convenience name for target.
@@ -287,12 +329,12 @@ roscpp_generate_messages_lisp: custom_navigation/CMakeFiles/roscpp_generate_mess
 
 # fast build rule for target.
 roscpp_generate_messages_lisp/fast:
-	cd /home/turtlebot/Documents/rosWS/custom_ros/build && $(MAKE) -f custom_navigation/CMakeFiles/roscpp_generate_messages_lisp.dir/build.make custom_navigation/CMakeFiles/roscpp_generate_messages_lisp.dir/build
+	cd /home/jp/Documents/rosWS/custom_ros/build && $(MAKE) -f custom_navigation/CMakeFiles/roscpp_generate_messages_lisp.dir/build.make custom_navigation/CMakeFiles/roscpp_generate_messages_lisp.dir/build
 .PHONY : roscpp_generate_messages_lisp/fast
 
 # Convenience name for target.
 custom_navigation/CMakeFiles/roscpp_generate_messages_py.dir/rule:
-	cd /home/turtlebot/Documents/rosWS/custom_ros/build && $(MAKE) -f CMakeFiles/Makefile2 custom_navigation/CMakeFiles/roscpp_generate_messages_py.dir/rule
+	cd /home/jp/Documents/rosWS/custom_ros/build && $(MAKE) -f CMakeFiles/Makefile2 custom_navigation/CMakeFiles/roscpp_generate_messages_py.dir/rule
 .PHONY : custom_navigation/CMakeFiles/roscpp_generate_messages_py.dir/rule
 
 # Convenience name for target.
@@ -301,12 +343,12 @@ roscpp_generate_messages_py: custom_navigation/CMakeFiles/roscpp_generate_messag
 
 # fast build rule for target.
 roscpp_generate_messages_py/fast:
-	cd /home/turtlebot/Documents/rosWS/custom_ros/build && $(MAKE) -f custom_navigation/CMakeFiles/roscpp_generate_messages_py.dir/build.make custom_navigation/CMakeFiles/roscpp_generate_messages_py.dir/build
+	cd /home/jp/Documents/rosWS/custom_ros/build && $(MAKE) -f custom_navigation/CMakeFiles/roscpp_generate_messages_py.dir/build.make custom_navigation/CMakeFiles/roscpp_generate_messages_py.dir/build
 .PHONY : roscpp_generate_messages_py/fast
 
 # Convenience name for target.
 custom_navigation/CMakeFiles/std_msgs_generate_messages_cpp.dir/rule:
-	cd /home/turtlebot/Documents/rosWS/custom_ros/build && $(MAKE) -f CMakeFiles/Makefile2 custom_navigation/CMakeFiles/std_msgs_generate_messages_cpp.dir/rule
+	cd /home/jp/Documents/rosWS/custom_ros/build && $(MAKE) -f CMakeFiles/Makefile2 custom_navigation/CMakeFiles/std_msgs_generate_messages_cpp.dir/rule
 .PHONY : custom_navigation/CMakeFiles/std_msgs_generate_messages_cpp.dir/rule
 
 # Convenience name for target.
@@ -315,12 +357,12 @@ std_msgs_generate_messages_cpp: custom_navigation/CMakeFiles/std_msgs_generate_m
 
 # fast build rule for target.
 std_msgs_generate_messages_cpp/fast:
-	cd /home/turtlebot/Documents/rosWS/custom_ros/build && $(MAKE) -f custom_navigation/CMakeFiles/std_msgs_generate_messages_cpp.dir/build.make custom_navigation/CMakeFiles/std_msgs_generate_messages_cpp.dir/build
+	cd /home/jp/Documents/rosWS/custom_ros/build && $(MAKE) -f custom_navigation/CMakeFiles/std_msgs_generate_messages_cpp.dir/build.make custom_navigation/CMakeFiles/std_msgs_generate_messages_cpp.dir/build
 .PHONY : std_msgs_generate_messages_cpp/fast
 
 # Convenience name for target.
 custom_navigation/CMakeFiles/std_msgs_generate_messages_lisp.dir/rule:
-	cd /home/turtlebot/Documents/rosWS/custom_ros/build && $(MAKE) -f CMakeFiles/Makefile2 custom_navigation/CMakeFiles/std_msgs_generate_messages_lisp.dir/rule
+	cd /home/jp/Documents/rosWS/custom_ros/build && $(MAKE) -f CMakeFiles/Makefile2 custom_navigation/CMakeFiles/std_msgs_generate_messages_lisp.dir/rule
 .PHONY : custom_navigation/CMakeFiles/std_msgs_generate_messages_lisp.dir/rule
 
 # Convenience name for target.
@@ -329,12 +371,12 @@ std_msgs_generate_messages_lisp: custom_navigation/CMakeFiles/std_msgs_generate_
 
 # fast build rule for target.
 std_msgs_generate_messages_lisp/fast:
-	cd /home/turtlebot/Documents/rosWS/custom_ros/build && $(MAKE) -f custom_navigation/CMakeFiles/std_msgs_generate_messages_lisp.dir/build.make custom_navigation/CMakeFiles/std_msgs_generate_messages_lisp.dir/build
+	cd /home/jp/Documents/rosWS/custom_ros/build && $(MAKE) -f custom_navigation/CMakeFiles/std_msgs_generate_messages_lisp.dir/build.make custom_navigation/CMakeFiles/std_msgs_generate_messages_lisp.dir/build
 .PHONY : std_msgs_generate_messages_lisp/fast
 
 # Convenience name for target.
 custom_navigation/CMakeFiles/std_msgs_generate_messages_py.dir/rule:
-	cd /home/turtlebot/Documents/rosWS/custom_ros/build && $(MAKE) -f CMakeFiles/Makefile2 custom_navigation/CMakeFiles/std_msgs_generate_messages_py.dir/rule
+	cd /home/jp/Documents/rosWS/custom_ros/build && $(MAKE) -f CMakeFiles/Makefile2 custom_navigation/CMakeFiles/std_msgs_generate_messages_py.dir/rule
 .PHONY : custom_navigation/CMakeFiles/std_msgs_generate_messages_py.dir/rule
 
 # Convenience name for target.
@@ -343,12 +385,12 @@ std_msgs_generate_messages_py: custom_navigation/CMakeFiles/std_msgs_generate_me
 
 # fast build rule for target.
 std_msgs_generate_messages_py/fast:
-	cd /home/turtlebot/Documents/rosWS/custom_ros/build && $(MAKE) -f custom_navigation/CMakeFiles/std_msgs_generate_messages_py.dir/build.make custom_navigation/CMakeFiles/std_msgs_generate_messages_py.dir/build
+	cd /home/jp/Documents/rosWS/custom_ros/build && $(MAKE) -f custom_navigation/CMakeFiles/std_msgs_generate_messages_py.dir/build.make custom_navigation/CMakeFiles/std_msgs_generate_messages_py.dir/build
 .PHONY : std_msgs_generate_messages_py/fast
 
 # Convenience name for target.
 custom_navigation/CMakeFiles/tf_generate_messages_cpp.dir/rule:
-	cd /home/turtlebot/Documents/rosWS/custom_ros/build && $(MAKE) -f CMakeFiles/Makefile2 custom_navigation/CMakeFiles/tf_generate_messages_cpp.dir/rule
+	cd /home/jp/Documents/rosWS/custom_ros/build && $(MAKE) -f CMakeFiles/Makefile2 custom_navigation/CMakeFiles/tf_generate_messages_cpp.dir/rule
 .PHONY : custom_navigation/CMakeFiles/tf_generate_messages_cpp.dir/rule
 
 # Convenience name for target.
@@ -357,12 +399,12 @@ tf_generate_messages_cpp: custom_navigation/CMakeFiles/tf_generate_messages_cpp.
 
 # fast build rule for target.
 tf_generate_messages_cpp/fast:
-	cd /home/turtlebot/Documents/rosWS/custom_ros/build && $(MAKE) -f custom_navigation/CMakeFiles/tf_generate_messages_cpp.dir/build.make custom_navigation/CMakeFiles/tf_generate_messages_cpp.dir/build
+	cd /home/jp/Documents/rosWS/custom_ros/build && $(MAKE) -f custom_navigation/CMakeFiles/tf_generate_messages_cpp.dir/build.make custom_navigation/CMakeFiles/tf_generate_messages_cpp.dir/build
 .PHONY : tf_generate_messages_cpp/fast
 
 # Convenience name for target.
 custom_navigation/CMakeFiles/tf_generate_messages_lisp.dir/rule:
-	cd /home/turtlebot/Documents/rosWS/custom_ros/build && $(MAKE) -f CMakeFiles/Makefile2 custom_navigation/CMakeFiles/tf_generate_messages_lisp.dir/rule
+	cd /home/jp/Documents/rosWS/custom_ros/build && $(MAKE) -f CMakeFiles/Makefile2 custom_navigation/CMakeFiles/tf_generate_messages_lisp.dir/rule
 .PHONY : custom_navigation/CMakeFiles/tf_generate_messages_lisp.dir/rule
 
 # Convenience name for target.
@@ -371,12 +413,12 @@ tf_generate_messages_lisp: custom_navigation/CMakeFiles/tf_generate_messages_lis
 
 # fast build rule for target.
 tf_generate_messages_lisp/fast:
-	cd /home/turtlebot/Documents/rosWS/custom_ros/build && $(MAKE) -f custom_navigation/CMakeFiles/tf_generate_messages_lisp.dir/build.make custom_navigation/CMakeFiles/tf_generate_messages_lisp.dir/build
+	cd /home/jp/Documents/rosWS/custom_ros/build && $(MAKE) -f custom_navigation/CMakeFiles/tf_generate_messages_lisp.dir/build.make custom_navigation/CMakeFiles/tf_generate_messages_lisp.dir/build
 .PHONY : tf_generate_messages_lisp/fast
 
 # Convenience name for target.
 custom_navigation/CMakeFiles/tf_generate_messages_py.dir/rule:
-	cd /home/turtlebot/Documents/rosWS/custom_ros/build && $(MAKE) -f CMakeFiles/Makefile2 custom_navigation/CMakeFiles/tf_generate_messages_py.dir/rule
+	cd /home/jp/Documents/rosWS/custom_ros/build && $(MAKE) -f CMakeFiles/Makefile2 custom_navigation/CMakeFiles/tf_generate_messages_py.dir/rule
 .PHONY : custom_navigation/CMakeFiles/tf_generate_messages_py.dir/rule
 
 # Convenience name for target.
@@ -385,7 +427,7 @@ tf_generate_messages_py: custom_navigation/CMakeFiles/tf_generate_messages_py.di
 
 # fast build rule for target.
 tf_generate_messages_py/fast:
-	cd /home/turtlebot/Documents/rosWS/custom_ros/build && $(MAKE) -f custom_navigation/CMakeFiles/tf_generate_messages_py.dir/build.make custom_navigation/CMakeFiles/tf_generate_messages_py.dir/build
+	cd /home/jp/Documents/rosWS/custom_ros/build && $(MAKE) -f custom_navigation/CMakeFiles/tf_generate_messages_py.dir/build.make custom_navigation/CMakeFiles/tf_generate_messages_py.dir/build
 .PHONY : tf_generate_messages_py/fast
 
 src/adcClient.o: src/adcClient.cpp.o
@@ -393,7 +435,7 @@ src/adcClient.o: src/adcClient.cpp.o
 
 # target to build an object file
 src/adcClient.cpp.o:
-	cd /home/turtlebot/Documents/rosWS/custom_ros/build && $(MAKE) -f custom_navigation/CMakeFiles/adcClient.dir/build.make custom_navigation/CMakeFiles/adcClient.dir/src/adcClient.cpp.o
+	cd /home/jp/Documents/rosWS/custom_ros/build && $(MAKE) -f custom_navigation/CMakeFiles/adcClient.dir/build.make custom_navigation/CMakeFiles/adcClient.dir/src/adcClient.cpp.o
 .PHONY : src/adcClient.cpp.o
 
 src/adcClient.i: src/adcClient.cpp.i
@@ -401,7 +443,7 @@ src/adcClient.i: src/adcClient.cpp.i
 
 # target to preprocess a source file
 src/adcClient.cpp.i:
-	cd /home/turtlebot/Documents/rosWS/custom_ros/build && $(MAKE) -f custom_navigation/CMakeFiles/adcClient.dir/build.make custom_navigation/CMakeFiles/adcClient.dir/src/adcClient.cpp.i
+	cd /home/jp/Documents/rosWS/custom_ros/build && $(MAKE) -f custom_navigation/CMakeFiles/adcClient.dir/build.make custom_navigation/CMakeFiles/adcClient.dir/src/adcClient.cpp.i
 .PHONY : src/adcClient.cpp.i
 
 src/adcClient.s: src/adcClient.cpp.s
@@ -409,7 +451,7 @@ src/adcClient.s: src/adcClient.cpp.s
 
 # target to generate assembly for a file
 src/adcClient.cpp.s:
-	cd /home/turtlebot/Documents/rosWS/custom_ros/build && $(MAKE) -f custom_navigation/CMakeFiles/adcClient.dir/build.make custom_navigation/CMakeFiles/adcClient.dir/src/adcClient.cpp.s
+	cd /home/jp/Documents/rosWS/custom_ros/build && $(MAKE) -f custom_navigation/CMakeFiles/adcClient.dir/build.make custom_navigation/CMakeFiles/adcClient.dir/src/adcClient.cpp.s
 .PHONY : src/adcClient.cpp.s
 
 src/adcDriver.o: src/adcDriver.cpp.o
@@ -417,7 +459,7 @@ src/adcDriver.o: src/adcDriver.cpp.o
 
 # target to build an object file
 src/adcDriver.cpp.o:
-	cd /home/turtlebot/Documents/rosWS/custom_ros/build && $(MAKE) -f custom_navigation/CMakeFiles/adcDriver.dir/build.make custom_navigation/CMakeFiles/adcDriver.dir/src/adcDriver.cpp.o
+	cd /home/jp/Documents/rosWS/custom_ros/build && $(MAKE) -f custom_navigation/CMakeFiles/adcDriver.dir/build.make custom_navigation/CMakeFiles/adcDriver.dir/src/adcDriver.cpp.o
 .PHONY : src/adcDriver.cpp.o
 
 src/adcDriver.i: src/adcDriver.cpp.i
@@ -425,7 +467,7 @@ src/adcDriver.i: src/adcDriver.cpp.i
 
 # target to preprocess a source file
 src/adcDriver.cpp.i:
-	cd /home/turtlebot/Documents/rosWS/custom_ros/build && $(MAKE) -f custom_navigation/CMakeFiles/adcDriver.dir/build.make custom_navigation/CMakeFiles/adcDriver.dir/src/adcDriver.cpp.i
+	cd /home/jp/Documents/rosWS/custom_ros/build && $(MAKE) -f custom_navigation/CMakeFiles/adcDriver.dir/build.make custom_navigation/CMakeFiles/adcDriver.dir/src/adcDriver.cpp.i
 .PHONY : src/adcDriver.cpp.i
 
 src/adcDriver.s: src/adcDriver.cpp.s
@@ -433,7 +475,7 @@ src/adcDriver.s: src/adcDriver.cpp.s
 
 # target to generate assembly for a file
 src/adcDriver.cpp.s:
-	cd /home/turtlebot/Documents/rosWS/custom_ros/build && $(MAKE) -f custom_navigation/CMakeFiles/adcDriver.dir/build.make custom_navigation/CMakeFiles/adcDriver.dir/src/adcDriver.cpp.s
+	cd /home/jp/Documents/rosWS/custom_ros/build && $(MAKE) -f custom_navigation/CMakeFiles/adcDriver.dir/build.make custom_navigation/CMakeFiles/adcDriver.dir/src/adcDriver.cpp.s
 .PHONY : src/adcDriver.cpp.s
 
 src/adcParams.o: src/adcParams.cpp.o
@@ -441,7 +483,7 @@ src/adcParams.o: src/adcParams.cpp.o
 
 # target to build an object file
 src/adcParams.cpp.o:
-	cd /home/turtlebot/Documents/rosWS/custom_ros/build && $(MAKE) -f custom_navigation/CMakeFiles/adcParams.dir/build.make custom_navigation/CMakeFiles/adcParams.dir/src/adcParams.cpp.o
+	cd /home/jp/Documents/rosWS/custom_ros/build && $(MAKE) -f custom_navigation/CMakeFiles/adcParams.dir/build.make custom_navigation/CMakeFiles/adcParams.dir/src/adcParams.cpp.o
 .PHONY : src/adcParams.cpp.o
 
 src/adcParams.i: src/adcParams.cpp.i
@@ -449,7 +491,7 @@ src/adcParams.i: src/adcParams.cpp.i
 
 # target to preprocess a source file
 src/adcParams.cpp.i:
-	cd /home/turtlebot/Documents/rosWS/custom_ros/build && $(MAKE) -f custom_navigation/CMakeFiles/adcParams.dir/build.make custom_navigation/CMakeFiles/adcParams.dir/src/adcParams.cpp.i
+	cd /home/jp/Documents/rosWS/custom_ros/build && $(MAKE) -f custom_navigation/CMakeFiles/adcParams.dir/build.make custom_navigation/CMakeFiles/adcParams.dir/src/adcParams.cpp.i
 .PHONY : src/adcParams.cpp.i
 
 src/adcParams.s: src/adcParams.cpp.s
@@ -457,7 +499,7 @@ src/adcParams.s: src/adcParams.cpp.s
 
 # target to generate assembly for a file
 src/adcParams.cpp.s:
-	cd /home/turtlebot/Documents/rosWS/custom_ros/build && $(MAKE) -f custom_navigation/CMakeFiles/adcParams.dir/build.make custom_navigation/CMakeFiles/adcParams.dir/src/adcParams.cpp.s
+	cd /home/jp/Documents/rosWS/custom_ros/build && $(MAKE) -f custom_navigation/CMakeFiles/adcParams.dir/build.make custom_navigation/CMakeFiles/adcParams.dir/src/adcParams.cpp.s
 .PHONY : src/adcParams.cpp.s
 
 src/gyro_calibration.o: src/gyro_calibration.cpp.o
@@ -465,7 +507,7 @@ src/gyro_calibration.o: src/gyro_calibration.cpp.o
 
 # target to build an object file
 src/gyro_calibration.cpp.o:
-	cd /home/turtlebot/Documents/rosWS/custom_ros/build && $(MAKE) -f custom_navigation/CMakeFiles/gyro_calibration.dir/build.make custom_navigation/CMakeFiles/gyro_calibration.dir/src/gyro_calibration.cpp.o
+	cd /home/jp/Documents/rosWS/custom_ros/build && $(MAKE) -f custom_navigation/CMakeFiles/gyro_calibration.dir/build.make custom_navigation/CMakeFiles/gyro_calibration.dir/src/gyro_calibration.cpp.o
 .PHONY : src/gyro_calibration.cpp.o
 
 src/gyro_calibration.i: src/gyro_calibration.cpp.i
@@ -473,7 +515,7 @@ src/gyro_calibration.i: src/gyro_calibration.cpp.i
 
 # target to preprocess a source file
 src/gyro_calibration.cpp.i:
-	cd /home/turtlebot/Documents/rosWS/custom_ros/build && $(MAKE) -f custom_navigation/CMakeFiles/gyro_calibration.dir/build.make custom_navigation/CMakeFiles/gyro_calibration.dir/src/gyro_calibration.cpp.i
+	cd /home/jp/Documents/rosWS/custom_ros/build && $(MAKE) -f custom_navigation/CMakeFiles/gyro_calibration.dir/build.make custom_navigation/CMakeFiles/gyro_calibration.dir/src/gyro_calibration.cpp.i
 .PHONY : src/gyro_calibration.cpp.i
 
 src/gyro_calibration.s: src/gyro_calibration.cpp.s
@@ -481,7 +523,7 @@ src/gyro_calibration.s: src/gyro_calibration.cpp.s
 
 # target to generate assembly for a file
 src/gyro_calibration.cpp.s:
-	cd /home/turtlebot/Documents/rosWS/custom_ros/build && $(MAKE) -f custom_navigation/CMakeFiles/gyro_calibration.dir/build.make custom_navigation/CMakeFiles/gyro_calibration.dir/src/gyro_calibration.cpp.s
+	cd /home/jp/Documents/rosWS/custom_ros/build && $(MAKE) -f custom_navigation/CMakeFiles/gyro_calibration.dir/build.make custom_navigation/CMakeFiles/gyro_calibration.dir/src/gyro_calibration.cpp.s
 .PHONY : src/gyro_calibration.cpp.s
 
 src/odom_gyro.o: src/odom_gyro.cpp.o
@@ -489,7 +531,7 @@ src/odom_gyro.o: src/odom_gyro.cpp.o
 
 # target to build an object file
 src/odom_gyro.cpp.o:
-	cd /home/turtlebot/Documents/rosWS/custom_ros/build && $(MAKE) -f custom_navigation/CMakeFiles/odom_gyro.dir/build.make custom_navigation/CMakeFiles/odom_gyro.dir/src/odom_gyro.cpp.o
+	cd /home/jp/Documents/rosWS/custom_ros/build && $(MAKE) -f custom_navigation/CMakeFiles/odom_gyro.dir/build.make custom_navigation/CMakeFiles/odom_gyro.dir/src/odom_gyro.cpp.o
 .PHONY : src/odom_gyro.cpp.o
 
 src/odom_gyro.i: src/odom_gyro.cpp.i
@@ -497,7 +539,7 @@ src/odom_gyro.i: src/odom_gyro.cpp.i
 
 # target to preprocess a source file
 src/odom_gyro.cpp.i:
-	cd /home/turtlebot/Documents/rosWS/custom_ros/build && $(MAKE) -f custom_navigation/CMakeFiles/odom_gyro.dir/build.make custom_navigation/CMakeFiles/odom_gyro.dir/src/odom_gyro.cpp.i
+	cd /home/jp/Documents/rosWS/custom_ros/build && $(MAKE) -f custom_navigation/CMakeFiles/odom_gyro.dir/build.make custom_navigation/CMakeFiles/odom_gyro.dir/src/odom_gyro.cpp.i
 .PHONY : src/odom_gyro.cpp.i
 
 src/odom_gyro.s: src/odom_gyro.cpp.s
@@ -505,7 +547,7 @@ src/odom_gyro.s: src/odom_gyro.cpp.s
 
 # target to generate assembly for a file
 src/odom_gyro.cpp.s:
-	cd /home/turtlebot/Documents/rosWS/custom_ros/build && $(MAKE) -f custom_navigation/CMakeFiles/odom_gyro.dir/build.make custom_navigation/CMakeFiles/odom_gyro.dir/src/odom_gyro.cpp.s
+	cd /home/jp/Documents/rosWS/custom_ros/build && $(MAKE) -f custom_navigation/CMakeFiles/odom_gyro.dir/build.make custom_navigation/CMakeFiles/odom_gyro.dir/src/odom_gyro.cpp.s
 .PHONY : src/odom_gyro.cpp.s
 
 src/robot_mover.o: src/robot_mover.cpp.o
@@ -513,7 +555,7 @@ src/robot_mover.o: src/robot_mover.cpp.o
 
 # target to build an object file
 src/robot_mover.cpp.o:
-	cd /home/turtlebot/Documents/rosWS/custom_ros/build && $(MAKE) -f custom_navigation/CMakeFiles/robot_mover.dir/build.make custom_navigation/CMakeFiles/robot_mover.dir/src/robot_mover.cpp.o
+	cd /home/jp/Documents/rosWS/custom_ros/build && $(MAKE) -f custom_navigation/CMakeFiles/robot_mover.dir/build.make custom_navigation/CMakeFiles/robot_mover.dir/src/robot_mover.cpp.o
 .PHONY : src/robot_mover.cpp.o
 
 src/robot_mover.i: src/robot_mover.cpp.i
@@ -521,7 +563,7 @@ src/robot_mover.i: src/robot_mover.cpp.i
 
 # target to preprocess a source file
 src/robot_mover.cpp.i:
-	cd /home/turtlebot/Documents/rosWS/custom_ros/build && $(MAKE) -f custom_navigation/CMakeFiles/robot_mover.dir/build.make custom_navigation/CMakeFiles/robot_mover.dir/src/robot_mover.cpp.i
+	cd /home/jp/Documents/rosWS/custom_ros/build && $(MAKE) -f custom_navigation/CMakeFiles/robot_mover.dir/build.make custom_navigation/CMakeFiles/robot_mover.dir/src/robot_mover.cpp.i
 .PHONY : src/robot_mover.cpp.i
 
 src/robot_mover.s: src/robot_mover.cpp.s
@@ -529,8 +571,56 @@ src/robot_mover.s: src/robot_mover.cpp.s
 
 # target to generate assembly for a file
 src/robot_mover.cpp.s:
-	cd /home/turtlebot/Documents/rosWS/custom_ros/build && $(MAKE) -f custom_navigation/CMakeFiles/robot_mover.dir/build.make custom_navigation/CMakeFiles/robot_mover.dir/src/robot_mover.cpp.s
+	cd /home/jp/Documents/rosWS/custom_ros/build && $(MAKE) -f custom_navigation/CMakeFiles/robot_mover.dir/build.make custom_navigation/CMakeFiles/robot_mover.dir/src/robot_mover.cpp.s
 .PHONY : src/robot_mover.cpp.s
+
+src/robot_obstacle.o: src/robot_obstacle.cpp.o
+.PHONY : src/robot_obstacle.o
+
+# target to build an object file
+src/robot_obstacle.cpp.o:
+	cd /home/jp/Documents/rosWS/custom_ros/build && $(MAKE) -f custom_navigation/CMakeFiles/robot_obstacle.dir/build.make custom_navigation/CMakeFiles/robot_obstacle.dir/src/robot_obstacle.cpp.o
+.PHONY : src/robot_obstacle.cpp.o
+
+src/robot_obstacle.i: src/robot_obstacle.cpp.i
+.PHONY : src/robot_obstacle.i
+
+# target to preprocess a source file
+src/robot_obstacle.cpp.i:
+	cd /home/jp/Documents/rosWS/custom_ros/build && $(MAKE) -f custom_navigation/CMakeFiles/robot_obstacle.dir/build.make custom_navigation/CMakeFiles/robot_obstacle.dir/src/robot_obstacle.cpp.i
+.PHONY : src/robot_obstacle.cpp.i
+
+src/robot_obstacle.s: src/robot_obstacle.cpp.s
+.PHONY : src/robot_obstacle.s
+
+# target to generate assembly for a file
+src/robot_obstacle.cpp.s:
+	cd /home/jp/Documents/rosWS/custom_ros/build && $(MAKE) -f custom_navigation/CMakeFiles/robot_obstacle.dir/build.make custom_navigation/CMakeFiles/robot_obstacle.dir/src/robot_obstacle.cpp.s
+.PHONY : src/robot_obstacle.cpp.s
+
+src/robot_position.o: src/robot_position.cpp.o
+.PHONY : src/robot_position.o
+
+# target to build an object file
+src/robot_position.cpp.o:
+	cd /home/jp/Documents/rosWS/custom_ros/build && $(MAKE) -f custom_navigation/CMakeFiles/robot_position.dir/build.make custom_navigation/CMakeFiles/robot_position.dir/src/robot_position.cpp.o
+.PHONY : src/robot_position.cpp.o
+
+src/robot_position.i: src/robot_position.cpp.i
+.PHONY : src/robot_position.i
+
+# target to preprocess a source file
+src/robot_position.cpp.i:
+	cd /home/jp/Documents/rosWS/custom_ros/build && $(MAKE) -f custom_navigation/CMakeFiles/robot_position.dir/build.make custom_navigation/CMakeFiles/robot_position.dir/src/robot_position.cpp.i
+.PHONY : src/robot_position.cpp.i
+
+src/robot_position.s: src/robot_position.cpp.s
+.PHONY : src/robot_position.s
+
+# target to generate assembly for a file
+src/robot_position.cpp.s:
+	cd /home/jp/Documents/rosWS/custom_ros/build && $(MAKE) -f custom_navigation/CMakeFiles/robot_position.dir/build.make custom_navigation/CMakeFiles/robot_position.dir/src/robot_position.cpp.s
+.PHONY : src/robot_position.cpp.s
 
 # Help Target
 help:
@@ -551,8 +641,11 @@ help:
 	@echo "... install/strip"
 	@echo "... list_install_components"
 	@echo "... odom_gyro"
+	@echo "... pcl_ros_gencfg"
 	@echo "... rebuild_cache"
 	@echo "... robot_mover"
+	@echo "... robot_obstacle"
+	@echo "... robot_position"
 	@echo "... roscpp_generate_messages_cpp"
 	@echo "... roscpp_generate_messages_lisp"
 	@echo "... roscpp_generate_messages_py"
@@ -580,6 +673,12 @@ help:
 	@echo "... src/robot_mover.o"
 	@echo "... src/robot_mover.i"
 	@echo "... src/robot_mover.s"
+	@echo "... src/robot_obstacle.o"
+	@echo "... src/robot_obstacle.i"
+	@echo "... src/robot_obstacle.s"
+	@echo "... src/robot_position.o"
+	@echo "... src/robot_position.i"
+	@echo "... src/robot_position.s"
 .PHONY : help
 
 
@@ -591,6 +690,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/turtlebot/Documents/rosWS/custom_ros/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/jp/Documents/rosWS/custom_ros/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

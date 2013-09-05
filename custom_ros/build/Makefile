@@ -36,10 +36,10 @@ CMAKE_COMMAND = /usr/bin/cmake
 RM = /usr/bin/cmake -E remove -f
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/turtlebot/Documents/rosWS/custom_ros/src
+CMAKE_SOURCE_DIR = /home/jp/Documents/rosWS/custom_ros/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/turtlebot/Documents/rosWS/custom_ros/build
+CMAKE_BINARY_DIR = /home/jp/Documents/rosWS/custom_ros/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -107,9 +107,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/turtlebot/Documents/rosWS/custom_ros/build/CMakeFiles /home/turtlebot/Documents/rosWS/custom_ros/build/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/jp/Documents/rosWS/custom_ros/build/CMakeFiles /home/jp/Documents/rosWS/custom_ros/build/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/turtlebot/Documents/rosWS/custom_ros/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/jp/Documents/rosWS/custom_ros/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -293,6 +293,19 @@ odom_gyro/fast:
 .PHONY : odom_gyro/fast
 
 #=============================================================================
+# Target rules for targets named pcl_ros_gencfg
+
+# Build rule for target.
+pcl_ros_gencfg: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 pcl_ros_gencfg
+.PHONY : pcl_ros_gencfg
+
+# fast build rule for target.
+pcl_ros_gencfg/fast:
+	$(MAKE) -f custom_navigation/CMakeFiles/pcl_ros_gencfg.dir/build.make custom_navigation/CMakeFiles/pcl_ros_gencfg.dir/build
+.PHONY : pcl_ros_gencfg/fast
+
+#=============================================================================
 # Target rules for targets named robot_mover
 
 # Build rule for target.
@@ -304,6 +317,32 @@ robot_mover: cmake_check_build_system
 robot_mover/fast:
 	$(MAKE) -f custom_navigation/CMakeFiles/robot_mover.dir/build.make custom_navigation/CMakeFiles/robot_mover.dir/build
 .PHONY : robot_mover/fast
+
+#=============================================================================
+# Target rules for targets named robot_obstacle
+
+# Build rule for target.
+robot_obstacle: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 robot_obstacle
+.PHONY : robot_obstacle
+
+# fast build rule for target.
+robot_obstacle/fast:
+	$(MAKE) -f custom_navigation/CMakeFiles/robot_obstacle.dir/build.make custom_navigation/CMakeFiles/robot_obstacle.dir/build
+.PHONY : robot_obstacle/fast
+
+#=============================================================================
+# Target rules for targets named robot_position
+
+# Build rule for target.
+robot_position: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 robot_position
+.PHONY : robot_position
+
+# fast build rule for target.
+robot_position/fast:
+	$(MAKE) -f custom_navigation/CMakeFiles/robot_position.dir/build.make custom_navigation/CMakeFiles/robot_position.dir/build
+.PHONY : robot_position/fast
 
 #=============================================================================
 # Target rules for targets named roscpp_generate_messages_cpp
@@ -422,19 +461,6 @@ tf_generate_messages_py/fast:
 	$(MAKE) -f custom_navigation/CMakeFiles/tf_generate_messages_py.dir/build.make custom_navigation/CMakeFiles/tf_generate_messages_py.dir/build
 .PHONY : tf_generate_messages_py/fast
 
-#=============================================================================
-# Target rules for targets named kinect_aux_node
-
-# Build rule for target.
-kinect_aux_node: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 kinect_aux_node
-.PHONY : kinect_aux_node
-
-# fast build rule for target.
-kinect_aux_node/fast:
-	$(MAKE) -f kinect_aux/CMakeFiles/kinect_aux_node.dir/build.make kinect_aux/CMakeFiles/kinect_aux_node.dir/build
-.PHONY : kinect_aux_node/fast
-
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -459,7 +485,10 @@ help:
 	@echo "... custom_navigation_genpy"
 	@echo "... gyro_calibration"
 	@echo "... odom_gyro"
+	@echo "... pcl_ros_gencfg"
 	@echo "... robot_mover"
+	@echo "... robot_obstacle"
+	@echo "... robot_position"
 	@echo "... roscpp_generate_messages_cpp"
 	@echo "... roscpp_generate_messages_lisp"
 	@echo "... roscpp_generate_messages_py"
@@ -469,7 +498,6 @@ help:
 	@echo "... tf_generate_messages_cpp"
 	@echo "... tf_generate_messages_lisp"
 	@echo "... tf_generate_messages_py"
-	@echo "... kinect_aux_node"
 .PHONY : help
 
 

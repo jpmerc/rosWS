@@ -5,6 +5,7 @@ The code for the adc (adcDriver.cpp and adcClient.cpp) in custom_navigation pack
 
 You need to add some code at the end of your ~/.bashrc file : 
    
+    export TURTLEBOT_LABEL = NAME_OF_THE_ROBOT
     export ROS_MASTER_URI = http://MASTER_IP::11311  
     export ROS_HOSTNAME = http://OWN_IP  
     source /opt/ros/groovy/setup.bash  

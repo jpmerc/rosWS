@@ -1,0 +1,76 @@
+<launch>
+  <arg name="base"       value="$(optenv TURTLEBOT_BASE create)"/>  <!-- create, rhoomba -->
+  <arg name="battery"    value="$(optenv TURTLEBOT_BATTERY /proc/acpi/battery/BAT0)"/>  <!-- /proc/acpi/battery/BAT0 -->
+  <arg name="stacks"     value="$(optenv TURTLEBOT_STACKS circles)"/>  <!-- circles, hexagons -->
+  <arg name="3d_sensor"  value="$(optenv TURTLEBOT_3D_SENSOR kinect)"/>  <!-- kinect, asus_xtion_pro -->
+  <arg name="simulation" value="$(optenv TURTLEBOT_SIMULATION false)"/>
+  <arg name="urdf_file" default="$(find xacro)/xacro.py '$(find turtlebot_description)/robots/$(arg base)_$(arg stacks)_$(arg 3d_sensor).urdf.xacro'" />
+ 
+
+  <param name="/use_sim_time" value="$(arg simulation)"/>
+  <param name="turtlebot_node/gyro_scale_correction" value="1.062802"/>
+  <param name="turtlebot_node/odom_angular_scale_correction" value="1.044974"/>
+  <param name="robot_description" command="$(arg urdf_file)" /> 
+  <param name="robot/name" value="$(optenv ROBOT turtlebot)"/>
+  <param name="robot/type" value="turtlebot"/> 
+  
+
+ 
+ <!-- Launch Hokuyo Range Finder -->
+  <node name="hokuyo" pkg="hokuyo_node" type="hokuyo_node" respawn="false" output="screen">
+    <param name="calibrate_time" type="bool" value="true"/> 
+    <param name="port" type="string" value="/dev/ttyACM0"/> 
+    <param name="intensity" type="bool" value="false"/>
+    <param name="min_angle" type="double" value="-2.09"/>
+    <param name="min_angle" type="double" value="2.09"/>
+    <param name="frame_id" type="string" value="laser"/> 
+    <param name="use_rep_117" type="bool" value="true"/>
+  </node>
+  
+  
+  <!-- Turtlebot Zero Conf -->
+  <node pkg="zeroconf_avahi" type="zeroconf" name="zeroconf_avahi" ns="zeroconf">
+    <rosparam file="$(find turtlebot_bringup)/param/zeroconf.yaml" command="load"/>
+  </node>
+  
+  
+  <!-- Turtlebot Robot -->
+  <node pkg="robot_state_publisher" type="robot_state_publisher" name="robot_state_publisher">
+    <param name="publish_frequency" type="double" value="5.0" />
+  </node>
+  <node pkg="diagnostic_aggregator" type="aggregator_node" name="diagnostic_aggregator" >
+    <rosparam command="load" file="$(find turtlebot_bringup)/param/$(arg base)/diagnostics.yaml" />
+  </node> 
+  
+  <!-- Turtlebot Mobile Base -->
+  <node pkg="create_node" type="turtlebot_node.py" name="turtlebot_node" respawn="true" args="--respawnable">
+    <param name="has_gyro" value="true" />
+    <param name="bonus" value="false" />
+    <param name="update_rate" value="30.0" />
+    <param name="port" value="/dev/ttyUSB0" />
+    <remap from="cmd_vel" to="mobile_base/commands/velocity" />
+    <remap from="turtlebot_node/sensor_state" to="mobile_base/sensors/core" />
+    <remap from="imu/data" to="mobile_base/sensors/imu_data" />
+    <remap from="imu/raw" to="mobile_base/sensors/imu_data_raw" />
+  </node>
+
+  <node pkg="nodelet" type="nodelet" name="mobile_base_nodelet_manager" args="manager"/>
+  <node pkg="nodelet" type="nodelet" name="cmd_vel_mux" args="load cmd_vel_mux/CmdVelMuxNodelet mobile_base_nodelet_manager">
+    <param name="yaml_cfg_file" value="$(find turtlebot_bringup)/param/mux2.yaml"/>
+    <remap from="cmd_vel_mux/output" to="mobile_base/commands/velocity"/>
+  </node>
+
+  
+  <!-- Turtlebot Netbook -->
+  <node pkg="linux_hardware" type="laptop_battery.py" name="turtlebot_laptop_battery">
+    <param name="acpi_path" type="string" value="$(arg battery)" />
+  </node>
+  
+  
+  <!-- Turtlebot App Manager -->
+  <node pkg="turtlebot_app_manager" type="appmaster" name="appmaster" args="-p 11312"/>
+  <node pkg="turtlebot_app_manager" type="app_manager" name="app_manager" args="--applist $(find turtlebot_bringup)/apps">
+    <param name="interface_master" value="http://localhost:11312"/>
+  </node>
+
+</launch>
