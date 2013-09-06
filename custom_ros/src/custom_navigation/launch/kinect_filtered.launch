@@ -1,4 +1,8 @@
 <launch>
+  <arg name="robot_label" value="$(optenv TURTLEBOT_LABEL robot_0)" />
+  <group ns="$(arg robot_label)">
+    <param name="tf_prefix" value="$(arg robot_label)" />
+
     <include file="$(find openni_launch)/launch/openni.launch" />
     
     <node pkg="nodelet" type="nodelet" name="pcl_manager" args="manager" output="screen" />
@@ -14,4 +18,5 @@
         leaf_size: 0.075
       </rosparam>
     </node>
+  </group>
 </launch>
