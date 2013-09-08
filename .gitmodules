@@ -1,0 +1,9 @@
+[submodule "custom_ros/src/lvsnbot_description"]
+	path = custom_ros/src/lvsnbot_description
+	url = https://github.com/fmder/lvsnbot_description.git
+[submodule "custom_ros/src/openni_launch"]
+	path = custom_ros/src/openni_launch
+	url = https://github.com/ros-drivers/openni_launch.git
+[submodule "custom_ros/src/rgbd_launch"]
+	path = custom_ros/src/rgbd_launch
+	url = https://github.com/ros-drivers/rgbd_launch.git
