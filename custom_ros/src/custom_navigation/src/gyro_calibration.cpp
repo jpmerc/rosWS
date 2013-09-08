@@ -26,6 +26,7 @@ vector<double> vGain1x;
 vector<double> vGain4x;
 double AVG_GAIN1X = 0.0;
 double AVG_GAIN4X = 0.0;
+string robot_name;
 
 void calibrateAtRest();
 void restCalibration(double &data1x,double &data4x);
@@ -167,8 +168,11 @@ void waitUser(){
 }
 
 void printResults(){
-    cout << "AVG1X = " << AVG1X << "  AVG4X = " << AVG4X << endl;
-    cout << "GAIN1X = " << AVG_GAIN1X << "  GAIN4X = " << AVG_GAIN4X << endl;
+    //cout << "AVG1X = " << AVG1X << "  AVG4X = " << AVG4X << endl;
+    //cout << "GAIN1X = " << AVG_GAIN1X << "  GAIN4X = " << AVG_GAIN4X << endl;
+    cout << "Calibration is over! Go modify the parameters in custom_navigation.launch ! " << endl;
+    cout << "avg = " << AVG1X << endl;
+    cout << "gain = " << AVG_GAIN1X << endl;
 }
 
 //=================================== THREADS ===================================
@@ -191,7 +195,10 @@ int main(int argc, char **argv)
 {
     ros::init(argc, argv, "gyro_calibration");
     ros::NodeHandle n;
-    ros::Subscriber sub = n.subscribe("robot_0/D_ADC/data", 1000, dataAdcReceived);
+    ros::NodeHandle nh("~");
+    nh.param("robot_name",robot_name, std::string("robot_0"));
+
+    ros::Subscriber sub = n.subscribe("/" + robot_name + "/D_ADC/data", 1000, dataAdcReceived);
     rate = new ros::Rate(20);
 
     boost::thread spinThread(spinFunction);
