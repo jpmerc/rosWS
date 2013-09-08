@@ -48,6 +48,8 @@ double odom_Rz = 0;
 ros::Subscriber moveBase_status_subscriber;
 ros::Subscriber odom_gyro_subscriber;
 
+string robot_name;
+
 vector<actionlib_msgs::GoalStatus> Move_Base_Status;
 
 void printOptions(){
@@ -168,7 +170,7 @@ void findInitialPose(){
 
 void randomizePose(){
     std_srvs::Empty srv;
-    if(ros::service::call("global_localization", srv)){
+    if(ros::service::call("/" + robot_name + "/global_localization", srv)){
         cout << "Pose randomization succeeded!" << endl;
     }
     else{
@@ -619,16 +621,20 @@ int main(int argc, char **argv)
 {
     ros::init(argc, argv, "robot_mover");
     ros::NodeHandle n;
+    ros::NodeHandle nh("~");
+
+
+    nh.param("robot_name",robot_name, std::string("robot_0"));
 
     //Node publishers
-    initPosePublisher = n.advertise<geometry_msgs::PoseWithCovarianceStamped>("initialpose", 100);
-    robotVelocityCommandsPublisher = n.advertise<geometry_msgs::Twist>("mobile_base/commands/velocity", 100);
-    finalPosePublisher = n.advertise<geometry_msgs::PoseStamped>("move_base_simple/goal", 100);
+    initPosePublisher = n.advertise<geometry_msgs::PoseWithCovarianceStamped>("/" + robot_name +"/initialpose", 100);
+    robotVelocityCommandsPublisher = n.advertise<geometry_msgs::Twist>("/" + robot_name +"/mobile_base/commands/velocity", 100);
+    finalPosePublisher = n.advertise<geometry_msgs::PoseStamped>("/" + robot_name +"/move_base_simple/goal", 100);
 
     //Node subscribers
-    amcl_pose_subscriber = n.subscribe("amcl_pose", 1, amcl_pose_callback);
-    moveBase_status_subscriber = n.subscribe("move_base/status", 1, move_base_status_callback);
-    odom_gyro_subscriber =  n.subscribe("odom_gyro", 1, odom_gyro_callback);
+    amcl_pose_subscriber = n.subscribe("/" + robot_name +"/amcl_pose", 1, amcl_pose_callback);
+    moveBase_status_subscriber = n.subscribe("/" + robot_name +"/move_base/status", 1, move_base_status_callback);
+    odom_gyro_subscriber =  n.subscribe("/" + robot_name +"/odom_gyro", 1, odom_gyro_callback);
 
     //Thread to execute the callbacks
     boost::thread spinThread(spinFunction);

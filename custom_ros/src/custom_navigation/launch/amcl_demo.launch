@@ -8,7 +8,7 @@
   </include>
 -->
   <!-- Map server  TO COMMENT WHEN WE WILL HAVE MULTIPLE ROBOTS RUNNING -->
-  <arg name="map_file" default="$(find custom_navigation)/maps/ulaval1.yaml"/>
+  <arg name="map_file" default="$(find custom_navigation)/maps/JPRoom_map.yaml"/>
   <node name="map_server" pkg="map_server" type="map_server" args="$(arg map_file)" output="screen">
     <param name="frame_id" value="/map"/>
   </node>
