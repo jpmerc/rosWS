@@ -1,0 +1,3 @@
+[submodule "custom_ros/src/lvsnbot_description"]
+	path = custom_ros/src/lvsnbot_description
+	url = https://github.com/fmder/lvsnbot_description.git
