@@ -1,5 +1,14 @@
 <launch>
-    <include file="$(find openni_launch)/launch/openni.launch" />
+  <arg name="robot_label" value="$(optenv TURTLEBOT_LABEL robot_0)" />
+
+  <group ns="$(arg robot_label)">
+    <param name="tf_prefix" value="$(arg robot_label)" />
+
+    <include file="$(find openni_launch)/launch/openni.launch">
+      <arg name="tf_prefix" value="/$(arg robot_label)"/>
+      <arg name="publish_tf" value="false"/>
+    </include>
+
     
     <node pkg="nodelet" type="nodelet" name="pcl_manager" args="manager" output="screen" />
     <!-- Run a VoxelGrid filter to clean NaNs and downsample the data -->
@@ -14,4 +23,5 @@
         leaf_size: 0.075
       </rosparam>
     </node>
+  </group>
 </launch>
