@@ -1,0 +1,5 @@
+<launch>
+    <node pkg="custom_navigation" type="gyro_calibration" name="gyro_calibration" respawn="false" output="screen">
+      <param name="robot_name" value="robot_1" />
+    </node>
+</launch>

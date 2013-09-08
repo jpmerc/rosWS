@@ -1,0 +1,5 @@
+<launch>
+    <node pkg="custom_navigation" type="robot_mover" name="robot_mover" respawn="false" output="screen">
+      <param name="robot_name" value="robot_0" />
+    </node>
+</launch>
