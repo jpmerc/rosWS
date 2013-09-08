@@ -1,4 +1,4 @@
-image: /home/jp/Documents/rosWS/custom_ros/src/custom_navigation/maps/ulaval1.pgm
+image: ulaval1.pgm
 resolution: 0.050000
 origin: [-11.200000, -14.400000, 0.000000]
 negate: 0

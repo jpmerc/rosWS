@@ -31,6 +31,8 @@ custom_navigation/M_ADC.h
 -
 vector
 -
+boost/thread.hpp
+-
 
 /opt/ros/groovy/include/XmlRpcDecl.h
 ros/macros.h

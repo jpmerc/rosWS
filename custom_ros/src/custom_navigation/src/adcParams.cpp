@@ -19,10 +19,12 @@ vector<dataStruct> dataVector;
 
 //double AVG1X = 1.2369862;
 //double AVG4X = 1.2122734;
-double AVG1X = 1.24124;
-double AVG4X = 1.2183;
 
-double GAIN1X = 424.0293;
+// LE BON POUR ROBOT double AVG1X = 1.24124;
+double AVG4X = 1.2183;
+double AVG1X = 0.0;
+
+double GAIN1X = 0.0;
 double GAIN4X = 106.7593;
 //double VARIANCE = 0.0195; //1 LSB
 double VARIANCE = 0.000195; //1 LSB
@@ -45,7 +47,7 @@ double gRot4X = 0.0;
 
 double PI = 3.14159265359;
 
-bool CALIBRATION_MODE = true;
+bool CALIBRATION_REST_MODE = true;
 int calib_size = 0;
 double calib_sum = 0.0;
 
@@ -194,9 +196,14 @@ int main(int argc, char **argv)
     }
 
     ros::NodeHandle n;
+
+    //Loading parameters
+    ros::NodeHandle nh("~");
+    nh.param("avg",AVG1X,1.24124);
+    nh.param("gain",GAIN1X,424.0293);
+
     ros::Subscriber sub = n.subscribe("D_ADC/data", 1000, dataAdcReceived);
     ros::Publisher gyro_publisher = n.advertise<sensor_msgs::Imu>("adcParams/gyroscope", 1000);
-
 
     //Set covariance since it doesnt change in time
     imu.orientation_covariance = orientation_variance;
