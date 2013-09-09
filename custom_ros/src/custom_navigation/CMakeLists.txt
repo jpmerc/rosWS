@@ -87,3 +87,7 @@ add_dependencies(robot_obstacle custom_navigation_gencpp)
 add_executable(robot_position src/robot_position.cpp)
 target_link_libraries(robot_position ${catkin_LIBRARIES})
 add_dependencies(robot_position custom_navigation_gencpp)
+
+add_executable(random_position src/random_position.cpp)
+target_link_libraries(random_position ${catkin_LIBRARIES})
+add_dependencies(random_position custom_navigation_gencpp)
