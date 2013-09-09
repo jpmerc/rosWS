@@ -184,6 +184,7 @@ void publishData(ros::Publisher *pub){
 
 void printDataToConsole(){
     cout << "Orientation (degrés) = " << gOrientation1X << endl;
+    //cout << "Gain = " << GAIN1X << "  average = " << AVG1X << endl;
 }
 
 int main(int argc, char **argv)
