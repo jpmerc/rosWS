@@ -36,3 +36,11 @@ Additional command to visualize the map, robot, path, laser scan, etc.
 
       export LIBGL_ALWAYS_SOFTWARE=1
       roslaunch turtlebot_rviz_launchers view_navigation.launch (or rosrun rviz rviz and you set everything manually)
+      
+      
+Git commands to load submodules :
+
+      git submodule init
+      git submodule foreach git pull origin master
+      git submodule update
+      
