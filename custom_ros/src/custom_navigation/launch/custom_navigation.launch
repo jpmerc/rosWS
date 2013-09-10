@@ -4,8 +4,7 @@
     <param name="tf_prefix" value="$(arg robot_label)" />
     <node pkg="custom_navigation" type="adcDriver" name="adcDriver" respawn="false" />
     <node pkg="custom_navigation" type="adcParams" name="adcParams" respawn="false" output="screen" >
-      <param name="avg" value="1.25543" />
-      <param name="gain" value="417.8" />
+      <rosparam file="$(find custom_navigation)/param/gyro/$(arg robot_label).yaml" command="load"/>
     </node>
     <node pkg="custom_navigation" type="odom_gyro" name="odom_gyro" respawn="false" />  
 </group>
