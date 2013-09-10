@@ -83,7 +83,6 @@
     <remap from="map" to="/map" />
   </node>
   
-  <node pkg="custom_navigation" type="random_position"  name="random_position" respawn="false" output="screen" />
 
 </group>
 </launch>
