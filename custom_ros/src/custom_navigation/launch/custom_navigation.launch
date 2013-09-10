@@ -7,12 +7,13 @@
       <rosparam file="$(find custom_navigation)/param/gyro/$(arg robot_label).yaml" command="load"/>
     </node>
     <node pkg="custom_navigation" type="odom_gyro" name="odom_gyro" respawn="false" />  
+    <!--  fake sensor for amcl -->
+    <node pkg="custom_navigation" type="robot_obstacle" name="robot_obstacle" respawn="false" >
+      <param name="robot_name" value="$(arg robot_label)" />
+    </node>
 </group>
 
-  <!--  fake sensor for amcl -->
-  <node pkg="custom_navigation" type="robot_obstacle" name="robot_obstacle" respawn="false" >
-    <param name="robot_name" value="$(arg robot_label)" />
-  </node>
+
   
   <!--  fake positions for amcl simulation 
   <node pkg="custom_navigation" type="robot_position" name="$(anon robot_position)" respawn="false" >
