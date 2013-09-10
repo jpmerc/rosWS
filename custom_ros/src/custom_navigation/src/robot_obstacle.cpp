@@ -35,7 +35,6 @@ void AddRobotPositionToCloud(pcl::PointCloud<pcl::PointXYZ> *pointcloud,const pc
 
 //=================================== CALLBACKS ===================================
 void robot_0_callback(const geometry_msgs::PoseWithCovarianceStampedConstPtr &pose){
-    cout << "I am robot 0" << endl;
     pcl::PointXYZ pt;
     pt.x = pose->pose.pose.position.x;
     pt.y = pose->pose.pose.position.y;
@@ -43,7 +42,6 @@ void robot_0_callback(const geometry_msgs::PoseWithCovarianceStampedConstPtr &po
     vRobot_0.push_back(pt);
 }
 void robot_1_callback(const geometry_msgs::PoseWithCovarianceStampedConstPtr &pose){
-    cout << "I am robot 1" << endl;
     pcl::PointXYZ pt;
     pt.x = pose->pose.pose.position.x;
     pt.y = pose->pose.pose.position.y;
@@ -51,7 +49,6 @@ void robot_1_callback(const geometry_msgs::PoseWithCovarianceStampedConstPtr &po
     vRobot_1.push_back(pt);
 }
 void robot_2_callback(const geometry_msgs::PoseWithCovarianceStampedConstPtr &pose){
-    cout << "I am robot 2" << endl;
     pcl::PointXYZ pt;
     pt.x = pose->pose.pose.position.x;
     pt.y = pose->pose.pose.position.y;
@@ -83,7 +80,7 @@ void robot_5_callback(const geometry_msgs::PoseWithCovarianceStampedConstPtr &po
 int getRobotID(){
     char c = robot_name.at(6);
     int id =  atoi(&c);
-    cout << "robot id = " << id << endl;
+    //cout << "robot id = " << id << endl;
     return id;
 }
 
