@@ -117,7 +117,8 @@ void updateData(nav_msgs::Odometry *odom_msg, sensor_msgs::Imu *gyro){
     if(thereIsIMUData){
         orientationQuaternion = gyro->orientation;
         theta = tf::getYaw(orientationQuaternion);
-        double angle_diff = theta - oldTheta;
+        //double angle_diff = theta - oldTheta;
+        double angle_diff = angles::shortest_angular_distance(oldTheta,theta);
 
         if(firstThetaUpdate){
             thetaWithoutDrift = theta;
@@ -126,8 +127,6 @@ void updateData(nav_msgs::Odometry *odom_msg, sensor_msgs::Imu *gyro){
         if(vx != 0){
             thetaWithoutDrift += angle_diff;
             angularVelocity = gyro->angular_velocity.z;
-
-
         }
         else{
             angularVelocity = 0;
@@ -136,15 +135,12 @@ void updateData(nav_msgs::Odometry *odom_msg, sensor_msgs::Imu *gyro){
         orientationQuaternionWithoutDrift = tf::createQuaternionMsgFromYaw(thetaWithoutDrift);
         cout << "oldTheta = " << angles::to_degrees(oldTheta) << "  newTheta = " << angles::to_degrees(theta) << "  thetaWithoutDrift = " << angles::to_degrees(thetaWithoutDrift) << endl;
 
-
-
         oldTheta = theta;
 
     }
     else{
         angularVelocity = 0.0;
     }
-
 
     last_time = current_time;
 }
