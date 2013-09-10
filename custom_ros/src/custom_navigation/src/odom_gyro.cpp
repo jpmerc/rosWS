@@ -31,8 +31,6 @@ ros::Time current_time;
 ros::Time last_time;
 
 void odom_callback(const nav_msgs::OdometryConstPtr& odom){
-
-    //Probleme ici pour les callbacks, je devrais recuperer les premiers elements et non les derniers---possible bug
     odom_lock = true;
     odom_vector.push_back(*odom);
     // printf("x = %.4f y = %.4f \n",odom->twist.twist.linear.x,odom->twist.twist.linear.y);
@@ -168,8 +166,8 @@ int main(int argc, char **argv)
                 createTransform(&odom_transform);
 
                 //Console print
-                printOdomMessage(&odom_msg);
-                printTransformMessage(&odom_transform);
+                //printOdomMessage(&odom_msg);
+                //printTransformMessage(&odom_transform);
 
                 //Publish the TF and the topic
                 odom_broadcaster.sendTransform(odom_transform);

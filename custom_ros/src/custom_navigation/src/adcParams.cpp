@@ -218,7 +218,7 @@ int main(int argc, char **argv)
         if(dataVector.size() > 0){
             updateData();
             publishData(&gyro_publisher);
-            printDataToConsole();
+            //printDataToConsole();
         }
         ros::spinOnce();
         usleep(lSleep);

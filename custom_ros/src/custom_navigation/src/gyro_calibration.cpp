@@ -171,8 +171,8 @@ void printResults(){
     //cout << "AVG1X = " << AVG1X << "  AVG4X = " << AVG4X << endl;
     //cout << "GAIN1X = " << AVG_GAIN1X << "  GAIN4X = " << AVG_GAIN4X << endl;
     cout << "Calibration is over! Go modify the parameters in custom_navigation.launch ! " << endl;
-    cout << "avg = " << AVG1X << endl;
-    cout << "gain = " << AVG_GAIN1X << endl;
+    cout << "avg: " << AVG1X << endl;
+    cout << "gain: " << AVG_GAIN1X << endl;
 }
 
 //=================================== THREADS ===================================
