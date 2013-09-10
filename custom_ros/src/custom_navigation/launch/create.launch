@@ -3,6 +3,7 @@
   <arg name="robot_label" value="$(optenv TURTLEBOT_LABEL robot_0)" />
   <arg name="base"       value="$(optenv TURTLEBOT_BASE create)"/>  <!-- create, rhoomba -->
   <arg name="battery"    value="$(optenv TURTLEBOT_BATTERY /proc/acpi/battery/BAT0)"/>  <!-- /proc/acpi/battery/BAT0 -->
+  <arg name="hokuyo_port" value="$(optenv HOKUYO_PORT ttyACM0)"/> <!-- HOKUYO_PORT set by custom_navigation.sh -->
   <arg name="stacks"     value="$(optenv TURTLEBOT_STACKS circles)"/>  <!-- circles, hexagons -->
   <arg name="3d_sensor"  value="$(optenv TURTLEBOT_3D_SENSOR kinect)"/>  <!-- kinect, asus_xtion_pro -->
   <arg name="simulation" value="$(optenv TURTLEBOT_SIMULATION false)"/>
@@ -25,7 +26,7 @@
   <node pkg="tf" type="static_transform_publisher" name="myLaserTF" args="0 0 0.075 0 0 0 /$(arg robot_label)/base_link /$(arg robot_label)/myLaser 100 " />
   <node name="hokuyo" pkg="hokuyo_node" type="hokuyo_node" respawn="false" output="screen">
     <param name="calibrate_time" type="bool" value="true"/> 
-    <param name="port" type="string" value="/dev/ttyACM1"/> 
+    <param name="port" type="string" value="/dev/$(arg hokuyo_port)"/> 
     <param name="intensity" type="bool" value="false"/>
     <param name="min_angle" type="double" value="-2.09"/>
     <param name="min_angle" type="double" value="2.09"/>
