@@ -93,7 +93,7 @@ void initSubscribersAndPublishers(ros::NodeHandle &node){
     if(id != 3) sub_robot3 = node.subscribe("/robot_3/amcl_pose", 100, robot_3_callback);
     if(id != 4) sub_robot4 = node.subscribe("/robot_4/amcl_pose", 100, robot_4_callback);
     if(id != 5) sub_robot5 = node.subscribe("/robot_5/amcl_pose", 100, robot_5_callback);
-    pointCloudPublisher = node.advertise<sensor_msgs::PointCloud2>(robot_name  + "/robots_sensor", 100);
+    pointCloudPublisher = node.advertise<sensor_msgs::PointCloud2>("/" + robot_name  + "/robots_sensor", 100);
 }
 
 pcl::PointCloud<pcl::PointXYZ> createPointCloud(){

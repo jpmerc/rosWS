@@ -1,11 +1,11 @@
 <launch>
   <arg name="robot_label" value="$(optenv TURTLEBOT_LABEL robot_0)" />
 
-  <!-- Map server  TO COMMENT WHEN WE WILL HAVE MULTIPLE ROBOTS RUNNING -->
+  <!-- Map server  TO COMMENT WHEN WE WILL HAVE MULTIPLE ROBOTS RUNNING 
   <arg name="map_file" default="$(find custom_navigation)/maps/ulaval1.yaml"/>
   <node name="map_server" pkg="map_server" type="map_server" args="$(arg map_file)" output="screen">
     <param name="frame_id" value="/map"/>
-  </node>
+  </node> -->
  
   <arg name="scan_topic" default="scan"/>
   <arg name="use_map_topic" default="false"/>
@@ -20,10 +20,10 @@
     <param name="use_map_topic" value="$(arg use_map_topic)"/>
     <!-- Publish scans from best pose at a max of 10 Hz -->
     <param name="odom_model_type" value="diff"/>
-    <param name="odom_alpha1" value="0.6"/>
-    <param name="odom_alpha2" value="0.8"/>
-    <param name="odom_alpha3" value="0.5"/>
-    <param name="odom_alpha4" value="0.5"/>
+    <param name="odom_alpha1" value="0.7"/>
+    <param name="odom_alpha2" value="0.3"/>
+    <param name="odom_alpha3" value="0.6"/>
+    <param name="odom_alpha4" value="0.7"/>
     <param name="odom_alpha5" value="0.15"/>
     <param name="gui_publish_rate" value="10.0"/>
     <param name="laser_max_beams" value="60"/>
