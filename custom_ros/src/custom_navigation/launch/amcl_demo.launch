@@ -1,39 +1,29 @@
 <launch>
   <arg name="robot_label" value="$(optenv TURTLEBOT_LABEL robot_0)" />
 
-<!--  <include file="$(find turtlebot_bringup)/launch/3dsensor.launch">
-    <arg name="rgb_processing" value="false" />
-    <arg name="depth_registration" value="false" />
-    <arg name="depth_processing" value="false" />
-  </include>
--->
   <!-- Map server  TO COMMENT WHEN WE WILL HAVE MULTIPLE ROBOTS RUNNING -->
   <arg name="map_file" default="$(find custom_navigation)/maps/ulaval1.yaml"/>
   <node name="map_server" pkg="map_server" type="map_server" args="$(arg map_file)" output="screen">
     <param name="frame_id" value="/map"/>
   </node>
-
-
-  
+ 
   <arg name="scan_topic" default="scan"/>
   <arg name="use_map_topic" default="false"/>
   <arg name="initial_pose_x" default="0.0"/> <!-- Use 17.0 for willow's map in simulation -->
   <arg name="initial_pose_y" default="0.0"/> <!-- Use 17.0 for willow's map in simulation -->
   <arg name="initial_pose_a" default="0.0"/>
 
-
-
 <group ns="$(arg robot_label)">
 <param name="tf_prefix" value="$(arg robot_label)" />
 
-  <node pkg="amcl" type="amcl" name="amcl" output="screen">
+ <node pkg="amcl" type="amcl" name="amcl" output="screen">
     <param name="use_map_topic" value="$(arg use_map_topic)"/>
     <!-- Publish scans from best pose at a max of 10 Hz -->
     <param name="odom_model_type" value="diff"/>
-    <param name="odom_alpha1" value="0.4"/>
-    <param name="odom_alpha2" value="0.4"/>
-    <param name="odom_alpha3" value="0.4"/>
-    <param name="odom_alpha4" value="0.4"/>
+    <param name="odom_alpha1" value="0.6"/>
+    <param name="odom_alpha2" value="0.8"/>
+    <param name="odom_alpha3" value="0.5"/>
+    <param name="odom_alpha4" value="0.5"/>
     <param name="odom_alpha5" value="0.15"/>
     <param name="gui_publish_rate" value="10.0"/>
     <param name="laser_max_beams" value="60"/>
@@ -43,10 +33,10 @@
     <param name="kld_err" value="0.05"/>
     <param name="kld_z" value="0.99"/>
     <!-- translation std dev, m -->
-    <param name="laser_z_hit" value="0.90"/>
+    <param name="laser_z_hit" value="0.95"/>
     <param name="laser_z_short" value="0.05"/>
     <param name="laser_z_max" value="0.05"/>
-    <param name="laser_z_rand" value="0.1"/>
+    <param name="laser_z_rand" value="0.05"/>
     <param name="laser_sigma_hit" value="0.2"/>
     <param name="laser_lambda_short" value="0.1"/>
     <param name="laser_model_type" value="likelihood_field"/>
@@ -61,7 +51,7 @@
     <!-- Increase tolerance because the computer can get quite busy -->
     <param name="transform_tolerance" value="1.0"/>
     <param name="recovery_alpha_slow" value="0.001"/>
-    <param name="recovery_alpha_fast" value="0.01"/>
+    <param name="recovery_alpha_fast" value="0.1"/>
     <remap from="scan" to="$(arg scan_topic)"/>
     <param name="initial_pose_x" value="$(arg initial_pose_x)"/>
     <param name="initial_pose_y" value="$(arg initial_pose_y)"/>
@@ -92,6 +82,7 @@
     <remap from="odom" to="odom_gyro" />
     <remap from="map" to="/map" />
   </node>
+  
 
 </group>
 </launch>
