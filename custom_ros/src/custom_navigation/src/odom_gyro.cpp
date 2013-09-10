@@ -4,6 +4,7 @@
 #include <vector>
 #include <tf/tf.h>
 #include <tf/transform_broadcaster.h>
+#include <angles/angles.h>
 using namespace std;
 
 
@@ -25,10 +26,15 @@ double y = 0.0;
 double dt = 0.0;
 double vx = 0.0;
 geometry_msgs::Quaternion orientationQuaternion = tf::createQuaternionMsgFromYaw(0.0);
+geometry_msgs::Quaternion orientationQuaternionWithoutDrift = tf::createQuaternionMsgFromYaw(0.0);
 double theta = 0.0;
 double angularVelocity = 0.0;
 ros::Time current_time;
 ros::Time last_time;
+
+double thetaWithoutDrift = 0.0;
+double oldTheta = 0.0;
+double firstThetaUpdate = true;
 
 void odom_callback(const nav_msgs::OdometryConstPtr& odom){
     odom_lock = true;
@@ -73,7 +79,7 @@ void createTransform(geometry_msgs::TransformStamped *odom_trans){
     odom_trans->child_frame_id = child_frame;
     odom_trans->header.frame_id = base_frame;
     odom_trans->header.stamp = current_time;
-    odom_trans->transform.rotation =  orientationQuaternion;
+    odom_trans->transform.rotation =  orientationQuaternionWithoutDrift;
     odom_trans->transform.translation.x = x;
     odom_trans->transform.translation.y = y;
 }
@@ -81,7 +87,7 @@ void createTransform(geometry_msgs::TransformStamped *odom_trans){
 void createOdomMessage(nav_msgs::Odometry *msg){
     msg->child_frame_id = child_frame;
     msg->header.frame_id = base_frame;
-    msg->pose.pose.orientation = orientationQuaternion;
+    msg->pose.pose.orientation = orientationQuaternionWithoutDrift;
     msg->pose.pose.position.x = x;
     msg->pose.pose.position.y = y;
     msg->twist.twist.angular.z = angularVelocity;
@@ -102,21 +108,39 @@ void updateData(nav_msgs::Odometry *odom_msg, sensor_msgs::Imu *gyro){
 
     //Translation (can only move in X axis)
     vx = odom_msg->twist.twist.linear.x;
-    double delta_x = (vx * cos(theta)) * dt;
-    double delta_y = (vx * sin(theta)) * dt;
+    double delta_x = (vx * cos(thetaWithoutDrift)) * dt;
+    double delta_y = (vx * sin(thetaWithoutDrift)) * dt;
     x += delta_x;
     y += delta_y;
 
     //Orientation
     if(thereIsIMUData){
         orientationQuaternion = gyro->orientation;
-        angularVelocity = gyro->angular_velocity.z;
         theta = tf::getYaw(orientationQuaternion);
+        //double angle_diff = theta - oldTheta;
+        double angle_diff = angles::shortest_angular_distance(oldTheta,theta);
+
+        if(firstThetaUpdate){
+            thetaWithoutDrift = theta;
+            firstThetaUpdate = false;
+        }
+        if(vx != 0){
+            thetaWithoutDrift += angle_diff;
+            angularVelocity = gyro->angular_velocity.z;
+        }
+        else{
+            angularVelocity = 0;
+        }
+
+        orientationQuaternionWithoutDrift = tf::createQuaternionMsgFromYaw(thetaWithoutDrift);
+        cout << "oldTheta = " << angles::to_degrees(oldTheta) << "  newTheta = " << angles::to_degrees(theta) << "  thetaWithoutDrift = " << angles::to_degrees(thetaWithoutDrift) << endl;
+
+        oldTheta = theta;
+
     }
     else{
         angularVelocity = 0.0;
     }
-
 
     last_time = current_time;
 }
