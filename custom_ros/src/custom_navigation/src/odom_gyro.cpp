@@ -136,6 +136,10 @@ void updateData(nav_msgs::Odometry *odom_msg, sensor_msgs::Imu *gyro){
                         (lastOdomMessage.pose.pose.position.x != odom_msg->pose.pose.position.x) ||
                         (lastOdomMessage.pose.pose.position.y != odom_msg->pose.pose.position.y);
 
+        if(hasMoved){
+            stateChangeCounter = 0;
+        }
+
         if(!hasMoved && hasMoved!=lastHasMoved){
             if(stateChangeCounter <= 60){
                 hasMoved = true;
@@ -145,6 +149,7 @@ void updateData(nav_msgs::Odometry *odom_msg, sensor_msgs::Imu *gyro){
                 stateChangeCounter = 0;
             }
         }
+
 
         if(hasMoved){
             thetaWithoutDrift += angle_diff;
