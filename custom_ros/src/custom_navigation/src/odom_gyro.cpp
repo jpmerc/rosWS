@@ -39,6 +39,7 @@ double firstThetaUpdate = true;
 nav_msgs::Odometry lastOdomMessage;
 bool lastHasMoved = false;
 bool stateChanged = false;
+int stateChangeCounter = 0;
 
 void odom_callback(const nav_msgs::OdometryConstPtr& odom){
     odom_lock = true;
@@ -129,18 +130,19 @@ void updateData(nav_msgs::Odometry *odom_msg, sensor_msgs::Imu *gyro){
             lastOdomMessage = *odom_msg;
             firstThetaUpdate = false;
             lastHasMoved = false;
+            stateChangeCounter = 0;
         }
         bool hasMoved = (lastOdomMessage.pose.pose.orientation.z != odom_msg->pose.pose.orientation.z) ||
                         (lastOdomMessage.pose.pose.position.x != odom_msg->pose.pose.position.x) ||
                         (lastOdomMessage.pose.pose.position.y != odom_msg->pose.pose.position.y);
 
         if(!hasMoved && hasMoved!=lastHasMoved){
-            if(!stateChanged){
+            if(stateChangeCounter <= 60){
                 hasMoved = true;
-                stateChanged = true;
+                stateChangeCounter++;
             }
             else{
-                stateChanged = false;
+                stateChangeCounter = 0;
             }
         }
 
@@ -154,7 +156,7 @@ void updateData(nav_msgs::Odometry *odom_msg, sensor_msgs::Imu *gyro){
 
         orientationQuaternionWithoutDrift = tf::createQuaternionMsgFromYaw(thetaWithoutDrift);
         //cout << "oldTheta = " << angles::to_degrees(oldTheta) << "  newTheta = " << angles::to_degrees(theta) << "  thetaWithoutDrift = " << angles::to_degrees(thetaWithoutDrift) << endl;
-        //cout << "Has moved = " << hasMoved << endl;
+        cout << "Has moved = " << hasMoved << "  Compteur = " << stateChangeCounter << endl;
 
         lastHasMoved = hasMoved;
         lastOdomMessage = *odom_msg;
