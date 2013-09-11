@@ -1,4 +1,3 @@
-export TURTLEBOT_LABEL=robot_0
 export TURTLEBOT_BASE=create
 export TURTLEBOT_STACKS=circles
 export TURTLEBOT_3D_SENSOR=kinect
@@ -11,3 +10,5 @@ source /opt/ros/groovy/setup.bash
 source ~/Devel/rosWS/custom_ros/devel/setup.sh
 export ROS_PACKAGE_PATH=~/Documents/rosWS/custom_ros:~/Workspace/src/iCreate_Custom:$ROS_PACKAGE_PATH
 export HOKUYO_PORT=$(ls -l /dev/serial/by-id/usb-Hokuyo* | awk '{print $11}' | awk -F"/" '{print $3}')
+echo ninja | sudo -S chmod a+rw /dev/ttyACM*
+echo ninja | sudo -S chmod a+rw /dev/ttyUSB*
