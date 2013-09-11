@@ -2,6 +2,7 @@ export TURTLEBOT_LABEL=robot_0
 export TURTLEBOT_BASE=create
 export TURTLEBOT_STACKS=circles
 export TURTLEBOT_3D_SENSOR=kinect
+export TURTLEBOT_BATTERY=/sys/class/power_supply/BAT0
 ipadr=$(hostname -I)
 export ROS_HOSTNAME=$ipadr
 export ROS_MASTER_URI=http://orleans.gel.ulaval.ca:11311

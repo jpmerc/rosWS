@@ -133,7 +133,6 @@ void updateData(nav_msgs::Odometry *odom_msg, sensor_msgs::Imu *gyro){
         bool hasMoved = (lastOdomMessage.pose.pose.orientation.z != odom_msg->pose.pose.orientation.z) ||
                         (lastOdomMessage.pose.pose.position.x != odom_msg->pose.pose.position.x) ||
                         (lastOdomMessage.pose.pose.position.y != odom_msg->pose.pose.position.y);
-        cout << "Has moved = " << hasMoved << endl;
 
         if(!hasMoved && hasMoved!=lastHasMoved){
             if(!stateChanged){
@@ -155,7 +154,7 @@ void updateData(nav_msgs::Odometry *odom_msg, sensor_msgs::Imu *gyro){
 
         orientationQuaternionWithoutDrift = tf::createQuaternionMsgFromYaw(thetaWithoutDrift);
         //cout << "oldTheta = " << angles::to_degrees(oldTheta) << "  newTheta = " << angles::to_degrees(theta) << "  thetaWithoutDrift = " << angles::to_degrees(thetaWithoutDrift) << endl;
-
+        //cout << "Has moved = " << hasMoved << endl;
 
         lastHasMoved = hasMoved;
         lastOdomMessage = *odom_msg;
