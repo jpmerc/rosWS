@@ -62,17 +62,17 @@
     <remap from="imu/raw" to="mobile_base/sensors/imu_data_raw" />
   </node>
 
-  <node pkg="nodelet" type="nodelet" name="mobile_base_nodelet_manager" args="manager"/>
-  <node pkg="nodelet" type="nodelet" name="cmd_vel_mux" args="load cmd_vel_mux/CmdVelMuxNodelet mobile_base_nodelet_manager">
+  <!-- <node pkg="nodelet" type="nodelet" name="mobile_base_nodelet_manager" args="manager"/>
+  <node pkg="nodelet" type="nodelet" name="cmd_vel_mux" args="load cmd_vel_mux/CmdVelMuxNodelet mobile_base_nodelet_manager" respawn="true">
     <param name="yaml_cfg_file" value="$(find custom_navigation)/param/mux.yaml"/>
     <remap from="cmd_vel_mux/mobile_base/commands/velocity" to="mobile_base/commands/velocity"/>
-  </node>
+  </node> -->
 
   
   <!-- Turtlebot Netbook -->
-  <node pkg="linux_hardware" type="laptop_battery.py" name="turtlebot_laptop_battery">
+  <!--<node pkg="linux_hardware" type="laptop_battery.py" name="turtlebot_laptop_battery">
     <param name="acpi_path" type="string" value="$(arg battery)" />
-  </node> 
+  </node> --> 
   
   
   <!-- Turtlebot App Manager -->

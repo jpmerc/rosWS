@@ -6,7 +6,7 @@
     <node pkg="custom_navigation" type="adcParams" name="adcParams" respawn="false" >
       <rosparam file="$(find custom_navigation)/param/gyro/$(arg robot_label).yaml" command="load"/>
     </node>
-    <node pkg="custom_navigation" type="odom_gyro" name="odom_gyro" respawn="false" />  
+    <node pkg="custom_navigation" type="odom_gyro" name="odom_gyro" respawn="false" output="screen"/>  
     <!--  fake sensor for amcl -->
     <node pkg="custom_navigation" type="robot_obstacle" name="robot_obstacle" respawn="false" >
       <param name="robot_name" value="$(arg robot_label)" />
