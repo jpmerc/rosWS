@@ -161,7 +161,7 @@ void updateData(nav_msgs::Odometry *odom_msg, sensor_msgs::Imu *gyro){
 
         orientationQuaternionWithoutDrift = tf::createQuaternionMsgFromYaw(thetaWithoutDrift);
         //cout << "oldTheta = " << angles::to_degrees(oldTheta) << "  newTheta = " << angles::to_degrees(theta) << "  thetaWithoutDrift = " << angles::to_degrees(thetaWithoutDrift) << endl;
-        cout << "Has moved = " << hasMoved << "  Compteur = " << stateChangeCounter << endl;
+        //cout << "Has moved = " << hasMoved << "  Compteur = " << stateChangeCounter << endl;
 
         lastHasMoved = hasMoved;
         lastOdomMessage = *odom_msg;
