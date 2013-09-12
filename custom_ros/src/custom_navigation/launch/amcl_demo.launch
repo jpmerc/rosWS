@@ -20,14 +20,14 @@
     <param name="use_map_topic" value="$(arg use_map_topic)"/>
     <!-- Publish scans from best pose at a max of 10 Hz -->
     <param name="odom_model_type" value="diff"/>
-    <param name="odom_alpha1" value="1.2"/>
+    <param name="odom_alpha1" value="1.7"/>
     <param name="odom_alpha2" value="0.5"/>
     <param name="odom_alpha3" value="0.9"/>
     <param name="odom_alpha4" value="1.2"/>
     <param name="odom_alpha5" value="0.15"/>
-    <param name="gui_publish_rate" value="10.0"/>
+    <param name="gui_publish_rate" value="1.0"/>
     <param name="laser_max_beams" value="60"/>
-    <param name="laser_min_range" value="0.18"/>
+    <param name="laser_min_range" value="0.20"/>
     <param name="laser_max_range" value="-1.0"/>
     <param name="min_particles" value="100"/>
     <param name="max_particles" value="1000"/>
@@ -79,6 +79,7 @@
     <rosparam file="$(find custom_navigation)/param/global_costmap_params.yaml" command="load" />
     <rosparam file="$(find custom_navigation)/param/base_local_planner_params.yaml" command="load" />
     <param name="global_frame" value="/map" />
+    <param name="shutdown_costmaps" value="true" />
     <remap from="cmd_vel" to="mobile_base/commands/velocity"/>
     <remap from="odom" to="odom_gyro" />
     <remap from="map" to="/map" />
