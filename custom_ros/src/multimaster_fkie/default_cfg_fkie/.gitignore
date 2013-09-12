@@ -1,0 +1,10 @@
+/build
+/html
+/.cproject
+/bin
+/srv_gen
+/msg_gen
+/.project
+/.settings
+/lib
+/.pydevproject
