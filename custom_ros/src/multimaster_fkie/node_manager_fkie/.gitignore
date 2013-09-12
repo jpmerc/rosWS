@@ -1,0 +1,8 @@
+/build
+/.cproject
+/bin
+/.project
+/doc
+/.settings
+/lib
+/.pydevproject
