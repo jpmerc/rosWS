@@ -1,8 +1,8 @@
-<arg name="robot_label" value="$(optenv TURTLEBOT_LABEL robot_0)" />
-<arg name="hubUri" value="$(optenv TURTLEBOT_HUB http://orleans.gel.ulaval.ca:6380)" />
-
 <launch> 
-  <node pkg="rocon_gateway" type="gateway.py" name="gateway" output="screen">
+    <arg name="robot_label" value="$(optenv TURTLEBOT_LABEL robot_0)" />
+    <arg name="hubUri" value="$(optenv TURTLEBOT_HUB http://orleans.gel.ulaval.ca:6380)" />
+
+    <node pkg="rocon_gateway" type="gateway.py" name="gateway" output="screen">
     <rosparam command="load" file="$(find custom_navigation)/param/gateway.yaml" />
     <rosparam command="load" file="$(find custom_navigation)/param/gateway_blacklist.yaml" />
     <rosparam param="hub_uri">http://10.241.56.183:6380</rosparam>
