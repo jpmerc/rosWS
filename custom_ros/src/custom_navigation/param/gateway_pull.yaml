@@ -44,10 +44,10 @@ firewall: true
 # Note that the pull_all, flip_all default rules negate any 
 # other default rules for the targeted gateways.
 #
-default_advertisements: 
-   - name: /chatter
-     node: /talker
-     type: publisher
+#default_advertisements: 
+#   - name: /chatter
+#     node: /talker
+#     type: publisher
 #    - name: /chat.*
 #      node: None
 #      type: subscriber
@@ -66,12 +66,14 @@ default_advertisements:
 #        node: None
 #        type: subscriber
 #
-#default_pulls: 
-#    - gateway: robot_0_gateway
-#      rule:  
-#        name: /chatter
-#        node: /talker
-#        type: publisher
+# default_pulls:
+#    - gateway: pirate_gateway 
+#    - gateway: pirate_.* 
+    - gateway: robot_0_gateway
+      rule:  
+        name: /chatter
+        node: /talker
+        type: publisher
 #    - gateway: pirate_.*
 #      rule:  
 #        name: /chat.*

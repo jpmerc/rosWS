@@ -66,11 +66,13 @@ default_advertisements:
 #        node: None
 #        type: subscriber
 #
-#default_pulls: 
-#    - gateway: robot_0_gateway
+# default_pulls:
+#    - gateway: pirate_gateway 
+#    - gateway: pirate_.* 
+#    - gateway: pirate_gateway
 #      rule:  
 #        name: /chatter
-#        node: /talker
+#        node: None
 #        type: publisher
 #    - gateway: pirate_.*
 #      rule:  
