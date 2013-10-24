@@ -1,5 +1,5 @@
-image: /home/jp/Devel/rosWS/custom_ros/src/custom_navigation/maps/laval2.pgm
-resolution: 0.020000
+image: laval2.pgm
+resolution: 0.050000
 origin: [-11.200000, -12.800000, 0.000000]
 negate: 0
 occupied_thresh: 0.65
