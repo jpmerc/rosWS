@@ -8,7 +8,7 @@
     <rosparam param="hub_uri">http://10.241.71.212:6380</rosparam>
     <!--<rosparam param="name">robot_0_gateway</rosparam>-->    
     <rosparam param="disable_zeroconf">true</rosparam>
-    <param name="name" type="string" value="$(arg robot_label)_gateway"/>
+    <param name="name" type="string" value="$supermaster_gateway"/>
     <!-- <rosparam param="hub_uri">http://10.241.56.183:6380</rosparam> 
      <param name="hub_uri" type="string" value="$(arg hubUri)"/>
      <param name="name" type="string" value="$(arg robot_label)_gateway"/>   

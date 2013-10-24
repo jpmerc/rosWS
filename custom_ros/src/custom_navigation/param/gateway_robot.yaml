@@ -49,5 +49,11 @@ default_pulls:
         name: /robot_.*/amcl_pose
         node: /robot_.*/amcl
         type: publisher
+    - gateway: supermaster_gateway
+      rule:  
+        name: /robot_.*/move_base_simple/goal
+        node: /robot_.*/move_base
+        type: publisher
+        
 
         

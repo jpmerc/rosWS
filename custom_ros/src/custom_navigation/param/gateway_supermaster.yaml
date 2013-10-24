@@ -27,10 +27,10 @@ firewall: true
 # Note that the pull_all, flip_all default rules negate any 
 # other default rules for the targeted gateways.
 #
-#default_advertisements:     
-#    - name: /chat.*
-#      node: None
-#      type: subscriber
+default_advertisements:     
+    - name: /robot_.*/move_base_simple/goal
+      node: /robot_.*/move_base
+      type: publisher
 #
 #default_flips: 
 #      rule:  
