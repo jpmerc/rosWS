@@ -31,7 +31,7 @@ default_advertisements:
     - name: /robot_.*/move_base_simple/goal
       node: /robot_.*/move_base
       type: publisher
-    - name: /robot_.*/amcl/initialpose
+    - name: /robot_.*/initialpose
       node: /robot_.*/amcl
       type: publisher
 #

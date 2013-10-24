@@ -59,6 +59,6 @@ default_pulls:
         type: publisher
     - gateway: supermaster_gateway
       rule:  
-        name: /robot_.*/amcl/initialpose
+        name: /robot_.*/initialpose
         node: /robot_.*/amcl
         type: publisher        
