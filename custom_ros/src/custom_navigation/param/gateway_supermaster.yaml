@@ -29,11 +29,11 @@ firewall: true
 #
 default_advertisements:     
     - name: /robot_.*/move_base_simple/goal
-      node: /robot_.*/move_base
-      type: subscriber
+      node: /rviz
+      type: publisher
     - name: /robot_.*/initialpose
-      node: /robot_.*/amcl
-      type: subscriber
+      node: /rviz
+      type: publisher
 #
 #default_flips: 
 #      rule:  
