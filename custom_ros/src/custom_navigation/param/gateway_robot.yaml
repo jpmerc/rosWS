@@ -30,15 +30,9 @@ default_advertisements:
    - name: /robot_.*/amcl_pose
      node: /robot_.*/amcl
      type: publisher
-   - name: /robot_.*/filtered/points
-     node: /robot_.*/pcl_manager
-     type: publisher
    - name: /robot_.*/voxel_grid/points
      node: /robot_.*/pcl_manager
-     type: publisher
-   - name: /robot_.*/odom_gyro
-     node: /robot_.*/odom_gyro
-     type: publisher      
+     type: publisher    
 #default_flips: 
 #    - gateway: pirate_gateway       # flip to a specific rule to a gateway
 #      rule:  
