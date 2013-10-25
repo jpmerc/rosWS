@@ -1,7 +1,7 @@
 <launch>  
-  <include file="$(find custom_navigation)/launch/create.launch"/>
+  <include file="$(find custom_navigation)/launch/slim_create.launch"/>
   <include file="$(find custom_navigation)/launch/custom_navigation.launch"/>
   <include file="$(find custom_navigation)/launch/kinect_filtered.launch"/>
-  <include file="$(find custom_navigation)/launch/amcl_demo.launch"/>
+  <include file="$(find custom_navigation)/launch/slim_amcl.launch"/>
   <include file="$(find custom_navigation)/launch/gateway_robot.launch"/>
 </launch>
