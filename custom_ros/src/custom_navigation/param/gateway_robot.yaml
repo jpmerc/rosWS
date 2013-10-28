@@ -5,7 +5,7 @@
 hub_whitelist: "Turtlebot Hub"
 # hub_blacklist: []
 # name: 'gateway'
-# watch_loop_period: 10
+watch_loop_period: 2
 
 # Used to block/permit remote gateway's from flipping to this gateway.
 firewall: true
