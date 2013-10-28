@@ -26,5 +26,5 @@ TrajectoryPlannerROS:
   vtheta_samples: 20
   dwa: true
   latch_xy_goal_tolerance: true
-  publish_cost_grid: true
+  publish_cost_grid: false
   transform_tolerance: 1.0
