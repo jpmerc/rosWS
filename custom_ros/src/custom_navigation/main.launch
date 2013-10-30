@@ -4,5 +4,4 @@
   <include file="$(find custom_navigation)/launch/kinect_filtered.launch"/>
   <include file="$(find custom_navigation)/launch/slim_amcl.launch"/>
   <include file="$(find custom_navigation)/launch/gateway_robot.launch"/>
-  <include file="$(find custom_navigation)/launch/image_saver.launch"/>
 </launch>
