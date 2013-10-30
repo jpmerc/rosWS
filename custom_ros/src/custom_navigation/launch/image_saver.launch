@@ -1,0 +1,7 @@
+<launch>
+    <arg name="robot_label" value="$(optenv TURTLEBOT_LABEL robot_0)" />
+    <node pkg="image_view" type="image_saver" name="image_saver" output="screen">
+        <param name="save_all_image" value="false"/>
+        <remap from="image" to="/$(arg robot_label)/camera/rgb/image_color"/>
+    </node>
+</launch>
