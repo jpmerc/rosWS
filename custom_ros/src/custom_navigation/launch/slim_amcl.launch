@@ -71,6 +71,7 @@
     <rosparam file="$(find custom_navigation)/param/local_costmap_params.yaml" command="load" />
     <rosparam file="$(find custom_navigation)/param/global_costmap_params.yaml" command="load" />
     <rosparam file="$(find custom_navigation)/param/base_local_planner_params.yaml" command="load" />
+    <rosparam file="$(find custom_navigation)/param/base_global_planner_params.yaml" command="load" />
     <param name="global_frame" value="/map" />
     <param name="shutdown_costmaps" value="true" />
     <remap from="cmd_vel" to="mobile_base/commands/velocity"/>
