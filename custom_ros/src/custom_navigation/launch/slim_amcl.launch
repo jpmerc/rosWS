@@ -2,7 +2,7 @@
   <arg name="robot_label" value="$(optenv TURTLEBOT_LABEL robot_0)" />
 
   <!-- Map server  TO COMMENT WHEN WE WILL HAVE MULTIPLE ROBOTS RUNNING -->
-  <arg name="map_file" default="$(find custom_navigation)/maps/laval2.yaml"/>
+  <arg name="map_file" default="$(find custom_navigation)/maps/laurentienne.yaml"/>
   <node name="map_server" pkg="map_server" type="map_server" args="$(arg map_file)" output="screen">
     <param name="frame_id" value="/map"/>
   </node>
@@ -71,6 +71,7 @@
     <rosparam file="$(find custom_navigation)/param/local_costmap_params.yaml" command="load" />
     <rosparam file="$(find custom_navigation)/param/global_costmap_params.yaml" command="load" />
     <rosparam file="$(find custom_navigation)/param/base_local_planner_params.yaml" command="load" />
+    <rosparam file="$(find custom_navigation)/param/base_global_planner_params.yaml" command="load" />
     <param name="global_frame" value="/map" />
     <param name="shutdown_costmaps" value="true" />
     <remap from="cmd_vel" to="mobile_base/commands/velocity"/>
